@@ -60,7 +60,7 @@ public class Fist : MonoBehaviour {
             if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x < .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .2f))
             {
 
-                if (info.transform.tag != "enemy"&&info.transform.tag != "Fist")
+                if (info.transform.tag != "enemy"&&info.transform.name != "Player")
                 {
                     print(info.transform.name);
                     rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 400f));
