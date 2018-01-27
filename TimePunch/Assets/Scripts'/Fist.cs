@@ -4,6 +4,8 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 public class Fist : MonoBehaviour {
+    
+    int punchwaiter = 0;
     int punchtimer = 0;
     RaycastHit info;
     Vector3 prevLocalPos;
@@ -39,14 +41,29 @@ public class Fist : MonoBehaviour {
         }
         else
         {
+            if (cont.GetPress(Valve.VR.EVRButtonId.k_EButton_Grip))
+            {
+                rigidScript.Rig3D.mass = 100;
+                
+            }
+            else
+            {
+                rigidScript.Rig3D.mass = 10;
+                
+            }
             if (punchtimer > 0)
             {
                 idealPoint = new Vector3(0, -maxDist / 2, -.065f + maxDist / 2);
                 punchtimer--;
+                punchwaiter = 20;
             }
             else
             {
-                if (cont.GetPress(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger))
+                if (punchwaiter > 0)
+                {
+                    punchwaiter--;
+                }
+                else if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x>.01f)
                 {
                     punchtimer = 20;
                 }
@@ -79,8 +96,8 @@ public class Fist : MonoBehaviour {
             else
             {
                 
-                rigidScript.Rig3D.AddForce(rigidScript.Rig3D.transform.forward* cont.GetState().rAxis0.y * 90f);
-                rigidScript.Rig3D.AddForce(rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 90f);
+                rigidScript.Rig3D.AddForce(rigidScript.Rig3D.transform.forward* cont.GetState().rAxis0.y * 90f * rigidScript.Rig3D.mass);
+                rigidScript.Rig3D.AddForce(rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 90f * rigidScript.Rig3D.mass);
             }
            
             
