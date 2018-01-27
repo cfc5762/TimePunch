@@ -434,14 +434,14 @@ namespace Valve.VR.InteractionSystem
 					{
 						if ( vr.hmd.GetTrackedDeviceClass( (uint)i ) != Valve.VR.ETrackedDeviceClass.Controller )
 						{
-							Debug.Log( string.Format( "Hand - device {0} is not a controller", i ) );
+							//Debug.Log( string.Format( "Hand - device {0} is not a controller", i ) );
 							continue;
 						}
 
 						var device = SteamVR_Controller.Input( i );
 						if ( !device.valid )
 						{
-							Debug.Log( string.Format( "Hand - device {0} is not valid", i ) );
+							//Debug.Log( string.Format( "Hand - device {0} is not valid", i ) );
 							continue;
 						}
 
@@ -450,7 +450,7 @@ namespace Valve.VR.InteractionSystem
 							// Other hand is using this index, so we cannot use it.
 							if ( i == (int)otherHand.controller.index )
 							{
-								Debug.Log( string.Format( "Hand - device {0} is owned by the other hand", i ) );
+								//Debug.Log( string.Format( "Hand - device {0} is owned by the other hand", i ) );
 								continue;
 							}
 						}
@@ -723,6 +723,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void FixedUpdate()
 		{
+            
 			UpdateHandPoses();
 		}
 
@@ -871,7 +872,8 @@ namespace Valve.VR.InteractionSystem
 				controllerObject.transform.localScale = controllerPrefab.transform.localScale;
 
 				this.BroadcastMessage( "OnHandInitialized", index, SendMessageOptions.DontRequireReceiver ); // let child objects know we've initialized
-			}
+                controllerObject.SetActive(false);
+            }
 		}
 	}
 
