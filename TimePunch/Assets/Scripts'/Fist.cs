@@ -46,10 +46,30 @@ public class Fist : MonoBehaviour {
         {
             if (rFist == this)
             {
+                if (cont.GetState().rAxis0.x >= .1f || cont.GetState().rAxis0.x <= -.1f)
+                {
+
+                    rigidScript.Rig3D.transform.Rotate(new Vector3(0, 1, 0), cont.GetState().rAxis0.x * 2f);
+                }
                 transform.GetChild(0).localScale = new Vector3(-50, -50, 50);
             }
             else
             {
+                Vector3 vel = rigidScript.Rig3D.velocity;
+
+
+                // rigidScript.Rig3D.AddForce((rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * rigidScript.Rig3D.mass / Time.deltaTime));
+                //rigidScript.Rig3D.AddForce((rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x  * rigidScript.Rig3D.mass / Time.deltaTime) );
+                if (6 > Vector3.Dot(vel.normalized, (vel + (rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f) + (rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f))))
+                {
+                    rigidScript.Rig3D.velocity = rigidScript.Rig3D.velocity + rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f;
+                    rigidScript.Rig3D.velocity = rigidScript.Rig3D.velocity + rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f;
+                }
+                else
+                {
+                    Vector3.ClampMagnitude(rigidScript.Rig3D.velocity + rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f + rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f,6);
+                }
+               
                 transform.GetChild(0).localScale = new Vector3(-50, -50, -50);
             }
             if (lFist == null)
@@ -112,30 +132,24 @@ public class Fist : MonoBehaviour {
 
             transform.localPosition = transform.localPosition + Vector3.ClampMagnitude(idealPoint - transform.localPosition, maxSpeed);
 
-            if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x < .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .2f))
+            if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x < .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .3f))
             {
 
                 if (info.transform.tag != "enemy"&&info.transform.name != "Player")
                 {
                     print(info.transform.name);
-                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 400f));
+                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 400f*10/6));
                 }
             }
             if (!rightFist)
             {
 
-                if (cont.GetState().rAxis0.x >= .1f || cont.GetState().rAxis0.x <= -.1f)
-                {
-
-                    rigidScript.Rig3D.transform.Rotate(new Vector3(0, 1, 0), cont.GetState().rAxis0.x * 4f);
-                }
+               
                
             }
             else
             {
-                
-                rigidScript.Rig3D.AddForce(rigidScript.Rig3D.transform.forward* cont.GetState().rAxis0.y * 30f * rigidScript.Rig3D.mass);
-                rigidScript.Rig3D.AddForce(rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 30f * rigidScript.Rig3D.mass);
+               
             }
            
             
@@ -143,7 +157,7 @@ public class Fist : MonoBehaviour {
         }
         
         
-        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 12);
+        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 20);
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
 
