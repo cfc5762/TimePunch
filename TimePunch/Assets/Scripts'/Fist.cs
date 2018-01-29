@@ -59,8 +59,8 @@ public class Fist : MonoBehaviour {
 
 
                 // rigidScript.Rig3D.AddForce((rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * rigidScript.Rig3D.mass / Time.deltaTime));
-                //rigidScript.Rig3D.AddForce((rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x  * rigidScript.Rig3D.mass / Time.deltaTime) );
-                if (6 > Vector3.Dot(vel.normalized, (vel + (rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f) + (rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f))))
+                // rigidScript.Rig3D.AddForce((rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x  * rigidScript.Rig3D.mass / Time.deltaTime ));
+                if (4 > Vector3.Dot(vel.normalized, (vel + (rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f) + (rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f))))
                 {
                     rigidScript.Rig3D.velocity = rigidScript.Rig3D.velocity + rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f;
                     rigidScript.Rig3D.velocity = rigidScript.Rig3D.velocity + rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f;
