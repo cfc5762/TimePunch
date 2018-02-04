@@ -138,12 +138,17 @@ public class Fist : MonoBehaviour {
 
                 if (info.transform.tag != "enemy"&&info.transform.name != "Player")
                 {
+<<<<<<< HEAD
                     cont.TriggerHapticPulse(3000,Valve.VR.EVRButtonId.k_EButton_Axis4);
                     rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 400f*10/6));
                     if (info.collider.gameObject.tag == "Pillar")
                     {
                         rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 400f * 10 / 6));
                     }
+=======
+                    print(info.transform.name);
+                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 1200f*10/6));
+>>>>>>> master
                 }
             }
             
