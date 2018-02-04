@@ -138,7 +138,7 @@ public class Fist : MonoBehaviour {
                 if (info.transform.tag != "enemy"&&info.transform.name != "Player")
                 {
                     print(info.transform.name);
-                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 400f*10/6));
+                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 1200f*10/6));
                 }
             }
             if (!rightFist)
