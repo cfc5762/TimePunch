@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - Platform
   - Pillar
+  - Boost
   layers:
   - Default
   - TransparentFX
