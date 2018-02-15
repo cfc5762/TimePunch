@@ -62,9 +62,13 @@ public class Fist : MonoBehaviour {
             {
                 Vector3 ovel = rigidScript.Rig3D.velocity;
                 Vector3 vel = rigidScript.Rig3D.velocity;
+                float y = vel.y;
+                ovel.y = 0;
+                vel.y = 0;
                 vel += Vector3.ClampMagnitude(rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y + rigidScript.Rig3D.transform.right* cont.GetState().rAxis0.x,Acceleration);
                 if (vel.magnitude > MoveSpeed && ovel.magnitude > vel.magnitude)
                 {
+                    vel.y = y;
                     rigidScript.Rig3D.velocity = vel;
                 }
                 else if (vel.magnitude > MoveSpeed)
@@ -73,6 +77,7 @@ public class Fist : MonoBehaviour {
                 }
                 else
                 {
+                    vel.y = y;
                     rigidScript.Rig3D.velocity = vel;
                 }
                 
