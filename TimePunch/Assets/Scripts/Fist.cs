@@ -4,7 +4,8 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 public class Fist : MonoBehaviour {
-
+    public float Acceleration;
+    public float MoveSpeed;
     public static Fist rFist;
     public static Fist lFist;
     int punchwaiter = 0;
@@ -59,18 +60,27 @@ public class Fist : MonoBehaviour {
             }
             else
             {
+                Vector3 ovel = rigidScript.Rig3D.velocity;
                 Vector3 vel = rigidScript.Rig3D.velocity;
-
-                if (4 > Vector3.Dot(vel.normalized, (vel + (rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f) + (rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f))))
+                float y = vel.y;
+                ovel.y = 0;
+                vel.y = 0;
+                vel += Vector3.ClampMagnitude(rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y + rigidScript.Rig3D.transform.right* cont.GetState().rAxis0.x,Acceleration);
+                if (vel.magnitude > MoveSpeed && ovel.magnitude > vel.magnitude)
                 {
-                    rigidScript.Rig3D.velocity = rigidScript.Rig3D.velocity + rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f;
-                    rigidScript.Rig3D.velocity = rigidScript.Rig3D.velocity + rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f;
+                    vel.y = y;
+                    rigidScript.Rig3D.velocity = vel;
+                }
+                else if (vel.magnitude > MoveSpeed)
+                {
+
                 }
                 else
                 {
-                    Vector3.ClampMagnitude(rigidScript.Rig3D.velocity + rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y * 1f + rigidScript.Rig3D.transform.right * cont.GetState().rAxis0.x * 1f,6);
+                    vel.y = y;
+                    rigidScript.Rig3D.velocity = vel;
                 }
-               
+                
                 transform.GetChild(0).localScale = new Vector3(-50, -50, -50);
             }
             if (lFist == null)
@@ -158,7 +168,7 @@ public class Fist : MonoBehaviour {
         }
         
         
-        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 20);
+        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 35);
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
 
