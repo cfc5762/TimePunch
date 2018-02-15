@@ -4,6 +4,7 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 public class Fist : MonoBehaviour {
+    bool canpunch;
     public float Acceleration;
     public float MoveSpeed;
     public static Fist rFist;
@@ -23,7 +24,7 @@ public class Fist : MonoBehaviour {
     SteamVR_Controller.Device cont;
     // Use this for initialization
     void Start () {
-       
+        canpunch = true;
         info = new RaycastHit();
         prevpos = Vector3.zero;
         RightHit = Vector3.zero;
@@ -62,16 +63,17 @@ public class Fist : MonoBehaviour {
             {
                 Vector3 ovel = rigidScript.Rig3D.velocity;
                 Vector3 vel = rigidScript.Rig3D.velocity;
+                Vector2 axis = new Vector3(cont.GetState().rAxis0.x, cont.GetState().rAxis0.y);
                 float y = vel.y;
                 ovel.y = 0;
                 vel.y = 0;
-                vel += Vector3.ClampMagnitude(rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y + rigidScript.Rig3D.transform.right* cont.GetState().rAxis0.x,Acceleration);
-                if (vel.magnitude > MoveSpeed && ovel.magnitude > vel.magnitude)
+                vel += Vector3.ClampMagnitude(rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y + rigidScript.Rig3D.transform.right* cont.GetState().rAxis0.x,Acceleration)*axis.magnitude;
+                if (vel.magnitude > MoveSpeed*axis.magnitude && ovel.magnitude > vel.magnitude)
                 {
                     vel.y = y;
                     rigidScript.Rig3D.velocity = vel;
                 }
-                else if (vel.magnitude > MoveSpeed)
+                else if (vel.magnitude > MoveSpeed*axis.magnitude)
                 {
 
                 }
@@ -116,7 +118,7 @@ public class Fist : MonoBehaviour {
             }
             else
             {
-                rigidScript.Rig3D.mass = 10;
+                rigidScript.Rig3D.mass = 15;
                 
             }
             if (punchtimer > 0)
@@ -134,6 +136,7 @@ public class Fist : MonoBehaviour {
                 }
                 else if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x>.01f)
                 {
+                    canpunch = true; 
                     punchtimer = 20;
                 }
                 idealPoint = new Vector3(0, 0, -.065f);
@@ -146,18 +149,18 @@ public class Fist : MonoBehaviour {
             if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x < .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .3f))
             {
 
-                if (info.transform.tag != "enemy"&&info.transform.name != "Player")
+                if (info.transform.tag != "enemy"&&info.transform.name != "Player"&&canpunch)
                 {
-
+                    canpunch = false;
                     cont.TriggerHapticPulse(3000,Valve.VR.EVRButtonId.k_EButton_Axis4);
-                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 400f*10/6));
+                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime *400f*2));
                     if (info.collider.gameObject.tag == "Pillar")
                     {
-                        rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 400f * 10 / 6));
+                        rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 300f * 10 / 6));
                     }
 
                    // print(info.transform.name);
-                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 1200f*10/6));
+                    //rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 1200f*10/6));
 
                 }
             }
@@ -168,7 +171,7 @@ public class Fist : MonoBehaviour {
         }
         
         
-        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 25);
+        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 35);
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
 
