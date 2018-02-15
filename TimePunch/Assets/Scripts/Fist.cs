@@ -168,7 +168,7 @@ public class Fist : MonoBehaviour {
         }
         
         
-        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 35);
+        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 25);
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
 
