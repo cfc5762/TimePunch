@@ -10,7 +10,11 @@ public class GroundScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void OnCollisionStay (Collision C) {
-		
+	void OnCollisionEnter (Collision C) {
+        OnGround = true;
 	}
+    void OnCollisionExit(Collision C)
+    {
+        OnGround = false;
+    }
 }

@@ -67,7 +67,8 @@ public class Fist : MonoBehaviour {
                 float y = vel.y;
                 ovel.y = 0;
                 vel.y = 0;
-                vel += Vector3.ClampMagnitude(rigidScript.Rig3D.transform.forward * cont.GetState().rAxis0.y + rigidScript.Rig3D.transform.right* cont.GetState().rAxis0.x,Acceleration)*axis.magnitude;
+                print(GroundScript.OnGround);
+                vel += Vector3.ClampMagnitude(rigidScript.Rig3D.transform.forward * axis.y + rigidScript.Rig3D.transform.right* axis.x,(GroundScript.OnGround)?Acceleration:.08f)*axis.magnitude;
                 if (vel.magnitude > MoveSpeed*axis.magnitude && ovel.magnitude > vel.magnitude)
                 {
                     vel.y = y;
@@ -156,11 +157,10 @@ public class Fist : MonoBehaviour {
                     rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime *400f*2));
                     if (info.collider.gameObject.tag == "Pillar")
                     {
-                        rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 300f * 10 / 6));
+                        rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 800f * 10 / 6));
                     }
 
-                   // print(info.transform.name);
-                    //rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 1200f*10/6));
+                  
 
                 }
             }
