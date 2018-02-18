@@ -3,18 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Timer : MonoBehaviour {
+    bool isDone;
     float timeSoFar;
     public Font f;
 	// Use this for initialization
 	void Start () {
         timeSoFar = 0f;
+        isDone = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        timeSoFar += Time.deltaTime;
+        if(!isDone)
+            timeSoFar += Time.deltaTime;
 
 	}
+
+    //
+    public void finishLevel()
+    {
+        isDone = true;
+    }
 
     void OnGUI()
     {
