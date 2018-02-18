@@ -26,13 +26,16 @@ public class Goal : MonoBehaviour {
             switch (currentScene.name)
             {
                 case "Level1":
-                    SceneManager.LoadScene("Scenes/Stage2", LoadSceneMode.Single);
+                    SceneManager.LoadScene("Scenes/Level2", LoadSceneMode.Single);
                     break;
-                case "Stage2":
-                    SceneManager.LoadScene("Scenes/Stage3", LoadSceneMode.Single);
+                case "Level2":
+                    SceneManager.LoadScene("Scenes/arena3", LoadSceneMode.Single);
                     break;
-                case "Stage3":
-                    SceneManager.LoadScene("Scenes/Level1", LoadSceneMode.Single);
+                case "arena3":
+                    SceneManager.LoadScene("Scenes/Zone4", LoadSceneMode.Single);
+                    break;
+                case "Zone4":
+                    SceneManager.LoadScene("Scenes/Level1");
                     break;
                 default:
                     SceneManager.LoadScene("Scenes/Level1", LoadSceneMode.Single);
