@@ -144,26 +144,30 @@ public class Fist : MonoBehaviour {
             }
 
             
-
+            
             transform.localPosition = transform.localPosition + Vector3.ClampMagnitude(idealPoint - transform.localPosition, maxSpeed);
-
-            if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x < .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .3f))
-            {
-
-                if (info.transform.tag != "enemy"&&info.transform.name != "Player"&&canpunch)
+           
+                if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x < .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .3f))
                 {
-                    canpunch = false;
-                    cont.TriggerHapticPulse(3000,Valve.VR.EVRButtonId.k_EButton_Axis4);
-                    rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime *400f*2));
-                    if (info.collider.gameObject.tag == "Pillar")
+                    
+                    if (info.transform.tag != "enemy" && info.transform.name != "Player" && canpunch)
                     {
-                        rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 800f * 10 / 6));
+                        canpunch = false;
+                        cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
+                        Vector3 vel = rigidScript.Rig3D.velocity;
+                        vel.y = 0;
+                        
+                        vel+=((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude/Time.deltaTime*.55f);
+                    rigidScript.Rig3D.velocity = vel;
+                        if (info.collider.gameObject.tag == "Pillar")
+                        {
+                            rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 800f * 2));
+                        }
+
+
+
                     }
-
-                  
-
                 }
-            }
             
            
             
@@ -171,7 +175,7 @@ public class Fist : MonoBehaviour {
         }
         
         
-        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 35);
+        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 25);
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
 
