@@ -12,11 +12,13 @@ public class GroundScript : MonoBehaviour {
     // Update is called once per frame
     void OnCollisionEnter(Collision C)
     {
-        OnGround = true;
+        if (rigidScript.Rig3D.velocity.y > -0.5 && rigidScript.Rig3D.velocity.y < 0.5)
+            OnGround = true;
     }
     void OnCollisionStay(Collision C)
     {
-        OnGround = true;
+        if (rigidScript.Rig3D.velocity.y > -0.5&& rigidScript.Rig3D.velocity.y < 0.5)
+            OnGround = true;
     }
     void OnCollisionExit(Collision C)
     {
