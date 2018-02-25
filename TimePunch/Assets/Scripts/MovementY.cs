@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementY : MonoBehaviour {
-    private float speed = 6.0f;
+    public float speed = 6.0f;
+    public float top;
+    public float bottom;
 	// Use this for initialization
 	void Start ()
     {
@@ -13,12 +15,12 @@ public class MovementY : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(transform.position.y > 170)
+        if(transform.position.y > top)
         {
             speed = -speed;
         }
 
-        else if(transform.position.y < 128.5)
+        else if(transform.position.y < bottom)
         {
             speed = -speed;
         }

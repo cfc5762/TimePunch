@@ -22,25 +22,8 @@ public class Goal : MonoBehaviour {
         if (other.transform.root.gameObject.name=="Player"&&other.gameObject.tag!="Fist")
         {
             Scene currentScene = SceneManager.GetActiveScene();
-
-            switch (currentScene.name)
-            {
-                case "Level1":
-                    SceneManager.LoadScene("Scenes/Level2", LoadSceneMode.Single);
-                    break;
-                case "Level2":
-                    SceneManager.LoadScene("Scenes/arena3", LoadSceneMode.Single);
-                    break;
-                case "arena3":
-                    SceneManager.LoadScene("Scenes/Zone4", LoadSceneMode.Single);
-                    break;
-                case "Zone4":
-                    SceneManager.LoadScene("Scenes/Level1");
-                    break;
-                default:
-                    SceneManager.LoadScene("Scenes/Level1", LoadSceneMode.Single);
-                    break;                   
-            }
+            SceneManager.LoadScene((currentScene.buildIndex + 1)%SceneManager.sceneCountInBuildSettings);
+            
 
         }
     }

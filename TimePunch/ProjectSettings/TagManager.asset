@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - Pillar
   - Boost
+  - playButton
   layers:
   - Default
   - TransparentFX
