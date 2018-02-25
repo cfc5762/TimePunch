@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Valve.VR.InteractionSystem;
 
 public class Fist : MonoBehaviour {
@@ -149,7 +150,10 @@ public class Fist : MonoBehaviour {
            
                 if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x < .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .3f))
                 {
-                    
+                if (info.transform.tag == "playButton")
+                {
+                    SceneManager.LoadScene("Level1");
+                }
                     if (info.transform.tag != "enemy" && info.transform.name != "Player" && canpunch)
                     {
                         canpunch = false;
