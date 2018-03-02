@@ -113,16 +113,10 @@ public class Fist : MonoBehaviour {
 
                 }
             }
-            if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x>.01f)
-            {
-                rigidScript.Rig3D.mass = 100;
-                
-            }
-            else
-            {
+          
                 rigidScript.Rig3D.mass = 15;
                 
-            }
+            
             if (punchtimer > 0)
             {
                 idealPoint = new Vector3(0, -maxDist / 2, -.065f + maxDist / 2);
@@ -148,7 +142,7 @@ public class Fist : MonoBehaviour {
             
             transform.localPosition = transform.localPosition + Vector3.ClampMagnitude(idealPoint - transform.localPosition, maxSpeed);
            
-                if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).x < .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .3f))
+                if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .3f))
                 {
                 if (info.transform.tag == "playButton")
                 {
@@ -172,10 +166,6 @@ public class Fist : MonoBehaviour {
 
                     }
                 }
-            
-           
-            
-
         }
         
         
