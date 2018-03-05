@@ -27,10 +27,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SlidenBounce.unity
     guid: 125300fd1c1fc9448bb5880d344354a8
   - enabled: 0
-    path: Assets/Scenes/Level2.unity
+    path: 
     guid: 2ae8674c5f84f2b4ba20abac8c8999d4
   - enabled: 0
-    path: Assets/Scenes/Stage2.unity
+    path: 
     guid: e42ea87bd4701ed42af5bc5658ccd71e
   - enabled: 0
     path: Assets/Scenes/arena7.unity
