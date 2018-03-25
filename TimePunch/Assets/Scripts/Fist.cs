@@ -160,8 +160,27 @@ public class Fist : MonoBehaviour {
             
             
             transform.localPosition = transform.localPosition + Vector3.ClampMagnitude(idealPoint - transform.localPosition, maxSpeed);
-            
-        
+
+            if (cont.GetPress(Valve.VR.EVRButtonId.k_EButton_Grip) && Physics.Raycast(transform.position - (transform.forward - transform.up).normalized * .1f, transform.forward - transform.up, maxDist))
+            {
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    if (transform.GetChild(i).CompareTag("Projection"))
+                    {
+                        transform.GetChild(i).gameObject.SetActive(true);
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    if (transform.GetChild(i).CompareTag("Projection"))
+                    {
+                        transform.GetChild(i).gameObject.SetActive(false);
+                    }
+                }
+            }
                 if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && Physics.Raycast(transform.position-(transform.forward - transform.up).normalized*.1f, transform.forward - transform.up, out info, .4f))
                 {
                 if (info.transform.tag == "playButton")
