@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 9a07b29276a741d43ac700786197bde7
+timeCreated: 1522018796
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: block_default_63
+    100002: block_default_64
+    100004: block_default_65
+    100006: block_default_66
+    100008: block_default_67
+    100010: block_default_68
+    100012: block_default_69
+    100014: block_default_70
+    100016: block_default_71
+    100018: block_default_72
+    100020: block_default_73
+    100022: block_default_74
+    100024: block_default_75
+    100026: block_default_77
+    100028: block_default_78
+    100030: block_default_79
+    100032: block_default_80
+    100034: block_default_81
+    100036: block_default_82
+    100038: block_default_83
+    100040: block_default_84
+    100042: block_default_85
+    100044: //RootNode
+    400000: block_default_63
+    400002: block_default_64
+    400004: block_default_65
+    400006: block_default_66
+    400008: block_default_67
+    400010: block_default_68
+    400012: block_default_69
+    400014: block_default_70
+    400016: block_default_71
+    400018: block_default_72
+    400020: block_default_73
+    400022: block_default_74
+    400024: block_default_75
+    400026: block_default_77
+    400028: block_default_78
+    400030: block_default_79
+    400032: block_default_80
+    400034: block_default_81
+    400036: block_default_82
+    400038: block_default_83
+    400040: block_default_84
+    400042: block_default_85
+    400044: //RootNode
+    2300000: block_default_63
+    2300002: block_default_64
+    2300004: block_default_65
+    2300006: block_default_66
+    2300008: block_default_67
+    2300010: block_default_68
+    2300012: block_default_69
+    2300014: block_default_70
+    2300016: block_default_71
+    2300018: block_default_72
+    2300020: block_default_73
+    2300022: block_default_74
+    2300024: block_default_75
+    2300026: block_default_77
+    2300028: block_default_78
+    2300030: block_default_79
+    2300032: block_default_80
+    2300034: block_default_81
+    2300036: block_default_82
+    2300038: block_default_83
+    2300040: block_default_84
+    2300042: block_default_85
+    3300000: block_default_63
+    3300002: block_default_64
+    3300004: block_default_65
+    3300006: block_default_66
+    3300008: block_default_67
+    3300010: block_default_68
+    3300012: block_default_69
+    3300014: block_default_70
+    3300016: block_default_71
+    3300018: block_default_72
+    3300020: block_default_73
+    3300022: block_default_74
+    3300024: block_default_75
+    3300026: block_default_77
+    3300028: block_default_78
+    3300030: block_default_79
+    3300032: block_default_80
+    3300034: block_default_81
+    3300036: block_default_82
+    3300038: block_default_83
+    3300040: block_default_84
+    3300042: block_default_85
+    4300000: block_default_63
+    4300002: block_default_64
+    4300004: block_default_65
+    4300006: block_default_66
+    4300008: block_default_67
+    4300010: block_default_68
+    4300012: block_default_69
+    4300014: block_default_70
+    4300016: block_default_71
+    4300018: block_default_72
+    4300020: block_default_73
+    4300022: block_default_74
+    4300024: block_default_75
+    4300026: block_default_77
+    4300028: block_default_78
+    4300030: block_default_79
+    4300032: block_default_80
+    4300034: block_default_81
+    4300036: block_default_82
+    4300038: block_default_83
+    4300040: block_default_84
+    4300042: block_default_85
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
