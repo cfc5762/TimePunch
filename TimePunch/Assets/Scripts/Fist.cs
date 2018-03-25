@@ -160,8 +160,9 @@ public class Fist : MonoBehaviour {
             
             
             transform.localPosition = transform.localPosition + Vector3.ClampMagnitude(idealPoint - transform.localPosition, maxSpeed);
-           
-                if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && Physics.Raycast(transform.position, transform.forward - transform.up, out info, .3f))
+            
+        
+                if (cont.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis1).x > .01 && Physics.Raycast(transform.position-(transform.forward - transform.up).normalized*.1f, transform.forward - transform.up, out info, .4f))
                 {
                 if (info.transform.tag == "playButton")
                 {
@@ -172,6 +173,7 @@ public class Fist : MonoBehaviour {
                         canLaunch = false;
                         cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
                         Vector3 vel = rigidScript.Rig3D.velocity;
+                    vel.y = 0;
                     if ((vel + ((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f)).magnitude < vel.magnitude)
                     {
                         vel += ((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f) * 2;
