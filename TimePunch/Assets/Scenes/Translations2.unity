@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToTravel: 50
-  speedPerFrame: 0.02
+  speedPerFrame: 0.04
   horizontal: 1
   distanceRemaining: 0
 --- !u!23 &1220471615
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToTravel: 50
-  speedPerFrame: 0.02
+  speedPerFrame: 0.04
   horizontal: 1
   distanceRemaining: 0
 --- !u!23 &2025078193
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToTravel: 50
-  speedPerFrame: 0.02
+  speedPerFrame: 0.04
   horizontal: 1
   distanceRemaining: 0
 --- !u!23 &2054979281
