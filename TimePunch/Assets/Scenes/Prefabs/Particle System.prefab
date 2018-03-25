@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 199018703590450636}
   - component: {fileID: 114205107690806616}
   - component: {fileID: 54547896371494054}
-  - component: {fileID: 114991440602882464}
   - component: {fileID: 135771799515078092}
   m_Layer: 0
   m_Name: Particle System
@@ -39,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822721290735972}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 73.6, z: -0}
-  m_LocalScale: {x: 0.303727, y: 0.30372727, z: 0.30372727}
+  m_LocalPosition: {x: -32.3, y: 31.4, z: -23.7}
+  m_LocalScale: {x: 0.17544475, y: 0.17544468, z: 0.17544468}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,18 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2304461844c716b429176dd35297d324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114991440602882464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1822721290735972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0d2c14e81132c449a4f4d1db4df83b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  f: {fileID: 12800000, guid: 60665c865bb9e2b4ea72776afa4ed993, type: 3}
 --- !u!135 &135771799515078092
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -105,7 +92,7 @@ ParticleSystem:
   lengthInSec: 2
   simulationSpeed: 0.5
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -115,44 +102,20 @@ ParticleSystem:
     minScalar: 0
     maxCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     minCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0.5
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1
-        value: 0.5
-        inSlope: 0.5
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1757070215
+  randomSeed: 386574052
   InitialModule:
     serializedVersion: 3
     enabled: 1
