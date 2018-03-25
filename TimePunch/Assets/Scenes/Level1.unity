@@ -3689,36 +3689,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42dc5b2f45f2e2144a986a2c7fdab957, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1612896120 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1415483777054638, guid: abfb514e8a1aa694188209e1ed989a63,
-    type: 2}
-  m_PrefabInternal: {fileID: 1997441673}
---- !u!114 &1612896121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1612896120}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 395b6922a6e9e1544a45e59a31223b43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1612896127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1612896120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e416a60a814e3814789743422f9f9ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MusicAudioSources:
-  - {fileID: 62732156}
-  PersistToggle: {fileID: 0}
 --- !u!1 &1623288676 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100010, guid: 9a07b29276a741d43ac700786197bde7, type: 3}
@@ -4251,10 +4221,6 @@ Prefab:
     - target: {fileID: 4623496748286808, guid: abfb514e8a1aa694188209e1ed989a63, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1415483777054638, guid: abfb514e8a1aa694188209e1ed989a63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abfb514e8a1aa694188209e1ed989a63, type: 2}
