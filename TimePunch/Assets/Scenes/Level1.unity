@@ -1977,6 +1977,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42dc5b2f45f2e2144a986a2c7fdab957, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &704947063 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1485365048129992, guid: abfb514e8a1aa694188209e1ed989a63,
+    type: 2}
+  m_PrefabInternal: {fileID: 1997441673}
+--- !u!114 &704947066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 704947063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0d2c14e81132c449a4f4d1db4df83b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerFont: {fileID: 12800000, guid: 60665c865bb9e2b4ea72776afa4ed993, type: 3}
 --- !u!1001 &773516935
 Prefab:
   m_ObjectHideFlags: 0
@@ -2019,18 +2036,6 @@ Prefab:
     - target: {fileID: 1822721290735972, guid: cba8bb28c580cf442bde406fa29bc5b0, type: 2}
       propertyPath: m_Name
       value: Particle System (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637328941959600, guid: cba8bb28c580cf442bde406fa29bc5b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.17544475
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637328941959600, guid: cba8bb28c580cf442bde406fa29bc5b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.17544468
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637328941959600, guid: cba8bb28c580cf442bde406fa29bc5b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.17544468
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cba8bb28c580cf442bde406fa29bc5b0, type: 2}
