@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 452bf7350f04593458406f265234ce7e
+timeCreated: 1522015187
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: block_default_45
+    100002: block_default_46
+    100004: block_default_47
+    100006: block_default_48
+    100008: block_default_49
+    100010: block_default_50
+    100012: block_default_51
+    100014: block_default_52
+    100016: block_default_54
+    100018: block_default_55
+    100020: block_default_56
+    100022: block_default_57
+    100024: block_default_58
+    100026: block_default_59
+    100028: block_default_60
+    100030: block_default_61
+    100032: block_default_62
+    100034: //RootNode
+    100036: porch_floor_center_41
+    100038: porch_floor_center_42
+    100040: porch_floor_center_43
+    400000: block_default_45
+    400002: block_default_46
+    400004: block_default_47
+    400006: block_default_48
+    400008: block_default_49
+    400010: block_default_50
+    400012: block_default_51
+    400014: block_default_52
+    400016: block_default_54
+    400018: block_default_55
+    400020: block_default_56
+    400022: block_default_57
+    400024: block_default_58
+    400026: block_default_59
+    400028: block_default_60
+    400030: block_default_61
+    400032: block_default_62
+    400034: //RootNode
+    400036: porch_floor_center_41
+    400038: porch_floor_center_42
+    400040: porch_floor_center_43
+    2300000: block_default_45
+    2300002: block_default_46
+    2300004: block_default_47
+    2300006: block_default_48
+    2300008: block_default_49
+    2300010: block_default_50
+    2300012: block_default_51
+    2300014: block_default_52
+    2300016: block_default_54
+    2300018: block_default_55
+    2300020: block_default_56
+    2300022: block_default_57
+    2300024: block_default_58
+    2300026: block_default_59
+    2300028: block_default_60
+    2300030: block_default_61
+    2300032: block_default_62
+    2300034: porch_floor_center_41
+    2300036: porch_floor_center_42
+    2300038: porch_floor_center_43
+    3300000: block_default_45
+    3300002: block_default_46
+    3300004: block_default_47
+    3300006: block_default_48
+    3300008: block_default_49
+    3300010: block_default_50
+    3300012: block_default_51
+    3300014: block_default_52
+    3300016: block_default_54
+    3300018: block_default_55
+    3300020: block_default_56
+    3300022: block_default_57
+    3300024: block_default_58
+    3300026: block_default_59
+    3300028: block_default_60
+    3300030: block_default_61
+    3300032: block_default_62
+    3300034: porch_floor_center_41
+    3300036: porch_floor_center_42
+    3300038: porch_floor_center_43
+    4300000: porch_floor_center_41
+    4300002: porch_floor_center_42
+    4300004: porch_floor_center_43
+    4300006: block_default_45
+    4300008: block_default_46
+    4300010: block_default_47
+    4300012: block_default_48
+    4300014: block_default_49
+    4300016: block_default_50
+    4300018: block_default_51
+    4300020: block_default_52
+    4300022: block_default_54
+    4300024: block_default_55
+    4300026: block_default_56
+    4300028: block_default_57
+    4300030: block_default_58
+    4300032: block_default_59
+    4300034: block_default_60
+    4300036: block_default_61
+    4300038: block_default_62
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
