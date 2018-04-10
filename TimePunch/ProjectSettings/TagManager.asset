@@ -17,6 +17,8 @@ TagManager:
   - stage5
   - stage6
   - Bumper
+  - Projection
+  - group1
   layers:
   - Default
   - TransparentFX
