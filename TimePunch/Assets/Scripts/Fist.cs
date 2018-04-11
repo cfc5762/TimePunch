@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using Valve.VR.InteractionSystem;
 
 public class Fist : MonoBehaviour {
+    public static int speedImmune = 0;
     int punchBuffer = 0;
     bool canLaunch;
     bool reSync = false;
@@ -44,6 +45,10 @@ public class Fist : MonoBehaviour {
         }
         else
         {
+            if (speedImmune > 0)
+            {
+                speedImmune--;
+            }
             if (punchBuffer > 0)
             {
                 punchBuffer--;
@@ -187,11 +192,11 @@ public class Fist : MonoBehaviour {
                 {
                     SceneManager.LoadScene("Level1");
                 }
-                    if (info.transform.tag != "enemy" && info.transform.name != "Player" && canLaunch)
-                    {
-                        canLaunch = false;
-                        cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
-                        Vector3 vel = rigidScript.Rig3D.velocity;
+                if (info.transform.tag != "Boost" && info.transform.tag != "enemy" && info.transform.name != "Player" && canLaunch)
+                {
+                    canLaunch = false;
+                    cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
+                    Vector3 vel = rigidScript.Rig3D.velocity;
                     vel.y = 0;
                     if ((vel + ((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f)).magnitude < vel.magnitude)
                     {
@@ -203,19 +208,29 @@ public class Fist : MonoBehaviour {
                     }
                     punchTimer = 0;
                     rigidScript.Rig3D.velocity = vel;
-                        if (info.collider.gameObject.tag == "Pillar")
-                        {
-                            rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 800f * 2));
-                        }
-
-
-
+                    if (info.collider.gameObject.tag == "Pillar")
+                    {
+                        rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 800f * 2));
                     }
+
+
+
                 }
+                else if (info.transform.tag != "Boost")
+                {
+                    canLaunch = false;
+                    cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
+                    Vector3 vel = rigidScript.Rig3D.velocity;
+                    vel.y = 0;
+                    vel += ((transform.forward - transform.up).normalized * (prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f) * info.transform.GetComponent<Boost>().punchMult;
+                    speedImmune = info.transform.GetComponent<Boost>().immuneFrames;
+
+                }
+            }
         }
+
+        if (speedImmune <= 0) { rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 25); }
         
-        
-        rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 25);
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
 

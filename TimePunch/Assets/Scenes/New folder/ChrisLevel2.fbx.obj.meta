@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 708d94953c5dd3847b1e296f45b146f9
+timeCreated: 1523314826
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: block_default_1
+    100002: block_default_13
+    100004: block_default_14
+    100006: block_default_15
+    100008: block_default_19
+    100010: block_default_21
+    100012: block_default_22
+    100014: block_default_23
+    100016: block_default_24
+    100018: block_default_26
+    100020: block_default_28
+    100022: block_default_3
+    100024: block_default_30
+    100026: block_default_31
+    100028: block_default_32
+    100030: block_default_33
+    100032: block_default_34
+    100034: block_default_35
+    100036: block_default_36
+    100038: block_default_37
+    100040: block_default_5
+    100042: block_piramid_25
+    100044: //RootNode
+    100046: cylinder_donut_2
+    100048: wall_doorwaySquare_8
+    400000: block_default_1
+    400002: block_default_13
+    400004: block_default_14
+    400006: block_default_15
+    400008: block_default_19
+    400010: block_default_21
+    400012: block_default_22
+    400014: block_default_23
+    400016: block_default_24
+    400018: block_default_26
+    400020: block_default_28
+    400022: block_default_3
+    400024: block_default_30
+    400026: block_default_31
+    400028: block_default_32
+    400030: block_default_33
+    400032: block_default_34
+    400034: block_default_35
+    400036: block_default_36
+    400038: block_default_37
+    400040: block_default_5
+    400042: block_piramid_25
+    400044: //RootNode
+    400046: cylinder_donut_2
+    400048: wall_doorwaySquare_8
+    2300000: block_default_1
+    2300002: block_default_13
+    2300004: block_default_14
+    2300006: block_default_15
+    2300008: block_default_19
+    2300010: block_default_21
+    2300012: block_default_22
+    2300014: block_default_23
+    2300016: block_default_24
+    2300018: block_default_26
+    2300020: block_default_28
+    2300022: block_default_3
+    2300024: block_default_30
+    2300026: block_default_31
+    2300028: block_default_32
+    2300030: block_default_33
+    2300032: block_default_34
+    2300034: block_default_35
+    2300036: block_default_36
+    2300038: block_default_37
+    2300040: block_default_5
+    2300042: block_piramid_25
+    2300044: cylinder_donut_2
+    2300046: wall_doorwaySquare_8
+    3300000: block_default_1
+    3300002: block_default_13
+    3300004: block_default_14
+    3300006: block_default_15
+    3300008: block_default_19
+    3300010: block_default_21
+    3300012: block_default_22
+    3300014: block_default_23
+    3300016: block_default_24
+    3300018: block_default_26
+    3300020: block_default_28
+    3300022: block_default_3
+    3300024: block_default_30
+    3300026: block_default_31
+    3300028: block_default_32
+    3300030: block_default_33
+    3300032: block_default_34
+    3300034: block_default_35
+    3300036: block_default_36
+    3300038: block_default_37
+    3300040: block_default_5
+    3300042: block_piramid_25
+    3300044: cylinder_donut_2
+    3300046: wall_doorwaySquare_8
+    4300000: block_default_1
+    4300002: block_default_13
+    4300004: block_default_14
+    4300006: block_default_15
+    4300008: block_default_19
+    4300010: block_default_21
+    4300012: block_default_22
+    4300014: block_default_23
+    4300016: block_default_24
+    4300018: block_default_26
+    4300020: block_default_28
+    4300022: block_default_3
+    4300024: block_default_30
+    4300026: block_default_31
+    4300028: block_default_32
+    4300030: block_default_33
+    4300032: block_default_34
+    4300034: block_default_35
+    4300036: block_default_36
+    4300038: block_default_37
+    4300040: block_default_5
+    4300042: block_piramid_25
+    4300044: cylinder_donut_2
+    4300046: wall_doorwaySquare_8
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,41 @@
+# Made using Asset Forge (www.assetforge.io) version 1.3 
+
+newmtl stone (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.667 0.663 0.737 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/stone (Instance).png
+
+newmtl woodDark (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.641 0.422 0.293 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl stone (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.667 0.663 0.737 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/stone (Instance) (Instance).png
+
+newmtl stone (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.667 0.663 0.737 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/stone (Instance) (Instance) (Instance).png
+
+newmtl stone (Instance) (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.667 0.663 0.737 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/stone (Instance) (Instance) (Instance) (Instance).png
+
+newmtl _defaultMat (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl _defaultMat (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
