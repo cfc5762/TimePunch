@@ -7,7 +7,9 @@ public class Translation : MonoBehaviour {
     [Range(-0.1f,0.1f)]
     public float speedPerFrame;
     public bool horizontal;
+
     List<Transform> objs = new List<Transform>();//objects on the platform
+
 
     public float distanceRemaining;
 	// Use this for initialization
@@ -40,6 +42,7 @@ public class Translation : MonoBehaviour {
     private void OnCollisionStay(Collision collision)
     {
 
+
         Transform Obj = collision.transform;
         while (Obj.parent != null)
         {
@@ -67,5 +70,8 @@ public class Translation : MonoBehaviour {
         }
         objs.Add(Obj);
         Obj.parent = transform;
+
+        collision.transform.parent = transform;
     }
+    
 }
