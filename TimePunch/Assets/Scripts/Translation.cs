@@ -36,4 +36,15 @@ public class Translation : MonoBehaviour {
             distanceRemaining = Mathf.Abs(distanceToTravel);
         }
 	}
+    private void OnCollisionStay(Collision collision)
+    {
+        collision.transform.parent = transform;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.parent == transform)
+        {
+            collision.transform.parent = null;
+        }
+    }
 }
