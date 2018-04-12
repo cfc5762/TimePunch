@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToTravel: 15
-  speedPerFrame: 0.0206
+  speedPerFrame: 0.04
   horizontal: 1
   distanceRemaining: 0
 --- !u!23 &450623370
@@ -828,7 +828,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4637328941959600, guid: cba8bb28c580cf442bde406fa29bc5b0, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cba8bb28c580cf442bde406fa29bc5b0, type: 2}
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToTravel: 25
-  speedPerFrame: 0.0206
+  speedPerFrame: 0.04
   horizontal: 0
   distanceRemaining: 0
 --- !u!23 &1885066758
