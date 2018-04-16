@@ -92,8 +92,11 @@ public class Fist : MonoBehaviour {
             }
             if (rFist == this)
             {// right fist stuff
-              
 
+                if (speedImmune > 0)
+                {
+                    speedImmune--;
+                }
                
                 
                 if (cont.GetState().rAxis0.x >= .1f || cont.GetState().rAxis0.x <= -.1f)//rotate here
@@ -216,20 +219,15 @@ public class Fist : MonoBehaviour {
 
 
                 }
-                else if (info.transform.tag != "Boost")
-                {
-                    canLaunch = false;
-                    cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
-                    Vector3 vel = rigidScript.Rig3D.velocity;
-                    vel.y = 0;
-                    vel += ((transform.forward - transform.up).normalized * (prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f) * info.transform.GetComponent<Boost>().punchMult;
-                    speedImmune = info.transform.GetComponent<Boost>().immuneFrames;
-
-                }
+               
             }
         }
-
-        if (speedImmune <= 0) { rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 25); }
+        if (speedImmune > 0)
+            rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 25 * speedImmune*speedImmune);
+        else
+        {
+            rigidScript.Rig3D.velocity = Vector3.ClampMagnitude(rigidScript.Rig3D.velocity, 25);
+        }
         
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
