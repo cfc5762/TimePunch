@@ -8,7 +8,7 @@ public class Translation : MonoBehaviour {
     public float speedPerFrame;
     public bool horizontal;
 
-    List<Transform> objs = new List<Transform>();//objects on the platform
+   
 
 
     public float distanceRemaining;
@@ -39,39 +39,6 @@ public class Translation : MonoBehaviour {
             distanceRemaining = Mathf.Abs(distanceToTravel);
         }
 	}
-    private void OnCollisionStay(Collision collision)
-    {
-
-
-        Transform Obj = collision.transform;
-        while (Obj.parent != null)
-        {
-            Obj = Obj.parent;
-        }
-        if(!objs.Contains(Obj))
-        objs.Add(Obj);
-        Obj.parent = transform;
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        Transform Obj = collision.transform;
-        while (Obj.parent != null)
-        {
-            if (objs.Contains(Obj))
-            {
-                objs.Remove(Obj);
-                Obj.parent = null;
-            }
-            else
-            {
-                Obj = Obj.parent;
-            }
-           
-        }
-        objs.Add(Obj);
-        Obj.parent = transform;
-
-        collision.transform.parent = transform;
-    }
+    
     
 }
