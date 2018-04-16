@@ -162,7 +162,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
@@ -245,7 +245,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 0.5
   seekLocation: {x: 0, y: 0, z: 0}
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
@@ -1404,7 +1404,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
@@ -1741,7 +1741,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
@@ -2505,7 +2505,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
@@ -3213,7 +3213,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
@@ -3421,7 +3421,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   mass: 1
-  maxSpeed: 10
+  maxSpeed: 7
   maxTurn: 0.25
   radius: 5
   Path: []
