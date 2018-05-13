@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SlidenBounce.unity
     guid: 125300fd1c1fc9448bb5880d344354a8
+  - enabled: 1
+    path: Assets/Scenes/arena8.unity
+    guid: 496d980197d9d254b91bb2c8b3144882
   - enabled: 0
     path: 
     guid: 2ae8674c5f84f2b4ba20abac8c8999d4
