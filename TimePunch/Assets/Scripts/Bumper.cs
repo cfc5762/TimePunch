@@ -21,9 +21,10 @@ public class Bumper : MonoBehaviour {
         //Debug.Log("Bumper has collided");
 
         //Check for player collision
-        if (other.transform.root.gameObject.tag=="Player")
+        if (other.transform.root.gameObject.name=="Player")
         {
-            Vector3 knockBack = (other.transform.position - gameObject.transform.position);     //calculate knockback
+            rigidScript.Rig3D.velocity = Vector3.zero;
+            Vector3 knockBack = (other.transform.position - gameObject.GetComponent<Collider>().ClosestPoint(other.transform.position));     //calculate knockback
             knockBack.Normalize();
             knockBack *= knockBackPower;
             rigidScript.Rig3D.velocity = knockBack;        //add knockback

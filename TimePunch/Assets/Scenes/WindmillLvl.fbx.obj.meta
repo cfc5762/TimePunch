@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: da8791217a61ada4c97d2401fb5b1f9a
+timeCreated: 1523490164
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: block_round_18
+    100002: block_round_19
+    100004: block_round_20
+    100006: block_round_21
+    100008: block_round_27
+    100010: block_round_28
+    100012: building_windmill_wings_12
+    100014: building_windmill_wings_29
+    100016: floor_square_26
+    100018: roof_31
+    100020: roof_half_22
+    100022: roof_half_23
+    100024: roof_half_24
+    100026: roof_half_25
+    100028: roof_half_32
+    100030: roof_half_33
+    100032: //RootNode
+    400000: block_round_18
+    400002: block_round_19
+    400004: block_round_20
+    400006: block_round_21
+    400008: block_round_27
+    400010: block_round_28
+    400012: building_windmill_wings_12
+    400014: building_windmill_wings_29
+    400016: floor_square_26
+    400018: roof_31
+    400020: roof_half_22
+    400022: roof_half_23
+    400024: roof_half_24
+    400026: roof_half_25
+    400028: roof_half_32
+    400030: roof_half_33
+    400032: //RootNode
+    2300000: block_round_18
+    2300002: block_round_19
+    2300004: block_round_20
+    2300006: block_round_21
+    2300008: block_round_27
+    2300010: block_round_28
+    2300012: building_windmill_wings_12
+    2300014: building_windmill_wings_29
+    2300016: floor_square_26
+    2300018: roof_31
+    2300020: roof_half_22
+    2300022: roof_half_23
+    2300024: roof_half_24
+    2300026: roof_half_25
+    2300028: roof_half_32
+    2300030: roof_half_33
+    3300000: block_round_18
+    3300002: block_round_19
+    3300004: block_round_20
+    3300006: block_round_21
+    3300008: block_round_27
+    3300010: block_round_28
+    3300012: building_windmill_wings_12
+    3300014: building_windmill_wings_29
+    3300016: floor_square_26
+    3300018: roof_31
+    3300020: roof_half_22
+    3300022: roof_half_23
+    3300024: roof_half_24
+    3300026: roof_half_25
+    3300028: roof_half_32
+    3300030: roof_half_33
+    4300000: block_round_18
+    4300002: block_round_19
+    4300004: block_round_20
+    4300006: block_round_21
+    4300008: block_round_27
+    4300010: block_round_28
+    4300012: building_windmill_wings_12
+    4300014: building_windmill_wings_29
+    4300016: floor_square_26
+    4300018: roof_31
+    4300020: roof_half_22
+    4300022: roof_half_23
+    4300024: roof_half_24
+    4300026: roof_half_25
+    4300028: roof_half_32
+    4300030: roof_half_33
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
