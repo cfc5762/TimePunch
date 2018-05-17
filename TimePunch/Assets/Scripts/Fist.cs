@@ -44,8 +44,16 @@ public class Fist : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        wind.volume = (rigidScript.Rig3D.velocity.magnitude / 25); // window volume depends on velocity
-  
+        if (rigidScript.Rig3D.velocity.magnitude != 0)
+        {
+            wind.volume = (rigidScript.Rig3D.velocity.magnitude / 25); // window volume depends on velocity
+        }
+
+        else
+        {
+            wind.volume -= 0.2f * Time.deltaTime;
+        }
+
         if (cont == null)//set controller
         {
             cont = GetComponentInParent<Hand>().controller;
