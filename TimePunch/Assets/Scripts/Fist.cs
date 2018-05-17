@@ -25,6 +25,8 @@ public class Fist : MonoBehaviour {
     public float maxSpeed;
     Vector3 idealPoint;
     SteamVR_Controller.Device cont;
+    public AudioSource punch;
+    public AudioSource whoosh;
     // Use this for initialization
     void Start () {
         canLaunch = true;
@@ -159,6 +161,8 @@ public class Fist : MonoBehaviour {
                 }
                 else if (punchBuffer>0)//this is where we punch
                 {
+                    whoosh.pitch = Random.Range(0.8f, 1.2f); // randomizes pitch
+                    whoosh.Play(); // plays whoosh sound when punch 
                     canLaunch = true; 
                     punchTimer = 20;
                 }
@@ -197,6 +201,8 @@ public class Fist : MonoBehaviour {
                 }
                 if (info.transform.tag != "Boost" && info.transform.tag != "enemy" && info.transform.name != "Player" && canLaunch)
                 {
+                    punch.pitch = Random.Range(0.8f, 1.2f);
+                    punch.Play();
                     canLaunch = false;
                     cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
                     Vector3 vel = rigidScript.Rig3D.velocity;
