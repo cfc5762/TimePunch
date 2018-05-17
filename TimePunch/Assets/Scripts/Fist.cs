@@ -28,6 +28,10 @@ public class Fist : MonoBehaviour {
     public AudioSource punch;
     public AudioSource whoosh;
     public AudioSource wind;
+    public AudioSource foot1;
+    public AudioSource landing;
+    public float timeForSteps;
+    public bool wasInAir = false;
     // Use this for initialization
     void Start () {
         canLaunch = true;
@@ -43,15 +47,50 @@ public class Fist : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
-        if (rigidScript.Rig3D.velocity.magnitude != 0)
+        ////////////Wind Sounds///////////
+        if (GroundScript.OnGround)
         {
-            wind.volume = (rigidScript.Rig3D.velocity.magnitude / 25); // window volume depends on velocity
+            wind.volume -= 0.5f * Time.deltaTime; // fade out
         }
 
+        else if (rigidScript.Rig3D.velocity.magnitude != 0)
+        {
+            wind.volume = (rigidScript.Rig3D.velocity.magnitude / 25); // wind volume depends on velocity
+        }
+
+        
         else
         {
-            wind.volume -= 0.2f * Time.deltaTime;
+            wind.volume -= 0.2f * Time.deltaTime; // fade out
+        }
+
+        /////////Footstep Sounds/////////
+        int num = Random.Range(1, 3);
+        if (GroundScript.OnGround && rigidScript.Rig3D.velocity.magnitude > 1.0f && rigidScript.Rig3D.velocity.magnitude < 5.0f && timeForSteps > 50.0f) // walking speed
+        {
+            foot1.pitch = Random.Range(0.8f, 1.2f);
+            foot1.Play();         
+            timeForSteps = 0;
+        }
+
+        else if(GroundScript.OnGround && rigidScript.Rig3D.velocity.magnitude >= 5.0f && timeForSteps > 25.0f) // running speed
+        {
+            foot1.pitch = Random.Range(0.8f, 1.2f);
+            foot1.Play();
+            timeForSteps = 0;
+        }
+        timeForSteps++;
+
+        //////////Landing Sound///////////
+        if(GroundScript.OnGround == false)
+        {
+            wasInAir = true;
+        }
+
+        if(GroundScript.OnGround == true && wasInAir == true)
+        {
+            landing.Play();
+            wasInAir = false;
         }
 
         if (cont == null)//set controller
