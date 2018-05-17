@@ -27,6 +27,7 @@ public class Fist : MonoBehaviour {
     SteamVR_Controller.Device cont;
     public AudioSource punch;
     public AudioSource whoosh;
+    public AudioSource wind;
     // Use this for initialization
     void Start () {
         canLaunch = true;
@@ -36,11 +37,15 @@ public class Fist : MonoBehaviour {
         LeftHit = Vector3.zero;
         idealPoint = new Vector3();
         hand = this.transform.parent.gameObject;
-	}
+        wind.volume = 0;
+        wind.Play();
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        
+
+        wind.volume = (rigidScript.Rig3D.velocity.magnitude / 25); // window volume depends on velocity
+  
         if (cont == null)//set controller
         {
             cont = GetComponentInParent<Hand>().controller;
@@ -215,6 +220,7 @@ public class Fist : MonoBehaviour {
                     {
                         vel += ((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f);
                     }
+                    
                     punchTimer = 0;
                     rigidScript.Rig3D.velocity = vel;
                     if (info.collider.gameObject.tag == "Pillar")
@@ -237,6 +243,8 @@ public class Fist : MonoBehaviour {
         
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
+
+        
 
     }
    
