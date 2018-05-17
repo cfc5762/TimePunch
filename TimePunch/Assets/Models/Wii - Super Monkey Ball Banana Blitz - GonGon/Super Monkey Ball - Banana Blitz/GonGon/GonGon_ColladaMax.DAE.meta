@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: b4e5577ac71a22c4bbd4a9fe57df73c2
+timeCreated: 1523124513
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: asi_l
+    100002: asi_r
+    100004: ear_l
+    100006: ear_r
+    100008: GonGon
+    100010: //RootNode
+    100012: hair
+    100014: hara
+    100016: hit_a_l
+    100018: hit_a_r
+    100020: hit_b_l
+    100022: hit_b_r
+    100024: hit_c_l
+    100026: hit_c_r
+    100028: jaw
+    100030: kao
+    100032: kata_l
+    100034: kata_r
+    100036: kosi
+    100038: koy_a_l
+    100040: koy_a_r
+    100042: koy_b_l
+    100044: koy_b_r
+    100046: koy_c_l
+    100048: koy_c_r
+    100050: kus_a_l
+    100052: kus_a_r
+    100054: kus_b_l
+    100056: kus_b_r
+    100058: kus_c_l
+    100060: kus_c_r
+    100062: lip
+    100064: mabuta
+    100066: momo_l
+    100068: momo_r
+    100070: mune
+    100072: nak_a_l
+    100074: nak_a_r
+    100076: nak_b_l
+    100078: nak_b_r
+    100080: nak_c_l
+    100082: nak_c_r
+    100084: nino_l
+    100086: nino_r
+    100088: oya_a_l
+    100090: oya_a_r
+    100092: oya_b_l
+    100094: oya_b_r
+    100096: oya_c_l
+    100098: oya_c_r
+    100100: sune_l
+    100102: sune_r
+    100104: tail
+    100106: te_l
+    100108: te_r
+    100110: toe_l
+    100112: toe_r
+    100114: ude_l
+    100116: ude_r
+    100118: waki_l
+    100120: waki_r
+    400000: asi_l
+    400002: asi_r
+    400004: ear_l
+    400006: ear_r
+    400008: GonGon
+    400010: //RootNode
+    400012: hair
+    400014: hara
+    400016: hit_a_l
+    400018: hit_a_r
+    400020: hit_b_l
+    400022: hit_b_r
+    400024: hit_c_l
+    400026: hit_c_r
+    400028: jaw
+    400030: kao
+    400032: kata_l
+    400034: kata_r
+    400036: kosi
+    400038: koy_a_l
+    400040: koy_a_r
+    400042: koy_b_l
+    400044: koy_b_r
+    400046: koy_c_l
+    400048: koy_c_r
+    400050: kus_a_l
+    400052: kus_a_r
+    400054: kus_b_l
+    400056: kus_b_r
+    400058: kus_c_l
+    400060: kus_c_r
+    400062: lip
+    400064: mabuta
+    400066: momo_l
+    400068: momo_r
+    400070: mune
+    400072: nak_a_l
+    400074: nak_a_r
+    400076: nak_b_l
+    400078: nak_b_r
+    400080: nak_c_l
+    400082: nak_c_r
+    400084: nino_l
+    400086: nino_r
+    400088: oya_a_l
+    400090: oya_a_r
+    400092: oya_b_l
+    400094: oya_b_r
+    400096: oya_c_l
+    400098: oya_c_r
+    400100: sune_l
+    400102: sune_r
+    400104: tail
+    400106: te_l
+    400108: te_r
+    400110: toe_l
+    400112: toe_r
+    400114: ude_l
+    400116: ude_r
+    400118: waki_l
+    400120: waki_r
+    4300000: GonGon
+    9500000: //RootNode
+    13700000: GonGon
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

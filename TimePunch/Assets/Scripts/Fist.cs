@@ -210,7 +210,8 @@ public class Fist : MonoBehaviour {
                 {
                 if (info.transform.tag == "playButton")
                 {
-                    SceneManager.LoadScene("Level1");
+                    Scene currentScene = SceneManager.GetActiveScene();
+                    SceneManager.LoadScene((currentScene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings);
                 }
                 if (info.transform.tag != "Boost" && info.transform.tag != "enemy" && info.transform.name != "Player" && canLaunch)
                 {
