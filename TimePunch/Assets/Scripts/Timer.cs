@@ -20,8 +20,8 @@ public class Timer : MonoBehaviour {
         textMesh = inGameTimer.AddComponent<TextMesh>();
         textMesh.fontSize = 200;
         textMesh.alignment = TextAlignment.Center;
-        inGameTimer.AddComponent<MeshRenderer>();
-        inGameTimer.AddComponent<Transform>();
+        
+        
         inGameTimer.transform.localScale = new Vector3(-0.0025f,0.0025f,0.0025f);
         inGameTimer.transform.Rotate(new Vector3(0.0f, 90.0f, -135.0f));
         

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RespawnZone : MonoBehaviour {
-    public Vector3 destination;
+    public static Vector3 destination;
 	// Use this for initialization
 	void Start () {
         destination = GameObject.FindGameObjectWithTag("Respawn").transform.position;
