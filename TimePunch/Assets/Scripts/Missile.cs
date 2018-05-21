@@ -51,8 +51,10 @@ public class Missile : MonoBehaviour {
         }
         else if (other.transform.root.gameObject.name == "Player")
         {
-            Debug.Log("Missile has hit the player!");
+            Timer.Restart();
+            rigidScript.Rig3D.position = RespawnZone.destination;
             Destroy(this.gameObject);
+
         }
     }
 }

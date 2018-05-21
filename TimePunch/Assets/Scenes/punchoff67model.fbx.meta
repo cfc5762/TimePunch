@@ -26,6 +26,8 @@ ModelImporter:
     100036: slope_default_63
     100038: wall_straight_53
     100040: wall_straight_58
+    100042: roof_canvas_0
+    100044: wall_straight_1
     400000: floor_hole_51
     400002: floor_hole_59
     400004: porch_floor_center_47
@@ -47,6 +49,8 @@ ModelImporter:
     400036: slope_default_63
     400038: wall_straight_53
     400040: wall_straight_58
+    400042: roof_canvas_0
+    400044: wall_straight_1
     2300000: floor_hole_51
     2300002: floor_hole_59
     2300004: porch_floor_center_47
@@ -67,6 +71,8 @@ ModelImporter:
     2300034: slope_default_63
     2300036: wall_straight_53
     2300038: wall_straight_58
+    2300040: roof_canvas_0
+    2300042: wall_straight_1
     3300000: floor_hole_51
     3300002: floor_hole_59
     3300004: porch_floor_center_47
@@ -87,6 +93,8 @@ ModelImporter:
     3300034: slope_default_63
     3300036: wall_straight_53
     3300038: wall_straight_58
+    3300040: roof_canvas_0
+    3300042: wall_straight_1
     4300000: slope_default_20
     4300002: slope_default_46
     4300004: porch_floor_center_47
@@ -107,6 +115,8 @@ ModelImporter:
     4300034: slope_default_63
     4300036: porch_floor_center_64
     4300038: porch_floor_center_65
+    4300040: roof_canvas_0
+    4300042: wall_straight_1
   materials:
     importMaterials: 1
     materialName: 0

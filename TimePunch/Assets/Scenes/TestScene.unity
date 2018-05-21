@@ -454,7 +454,7 @@ Prefab:
     - target: {fileID: 114762523499493792, guid: cf7d83804a7b82f428395fff2d35d17f,
         type: 2}
       propertyPath: aggroDistance
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf7d83804a7b82f428395fff2d35d17f, type: 2}
