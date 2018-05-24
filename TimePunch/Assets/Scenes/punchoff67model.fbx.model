@@ -1,0 +1,40 @@
+# Made using Asset Forge (1.3)
+
+:models
+Primitives/slope_default[(8.5, 0, 0);(0.0, 0.0, 0.0);(20.0, 0.5, 1.0);slope_default_20;element]
+Primitives/slope_default[(8.5, 0, -1);(0.0, 180.0, 0.0);(20.0, 0.5, 1.0);slope_default_46;element]
+Western/porch_floor_center[(8.5, -4.8, -2.1);(270.0, 0.0, 0.0);(20.0, 1.0, 3.0);porch_floor_center_47;roofJade+roofJade]
+Western/porch_floor_center[(8.5, -4.8, 1.3);(270.0, 0.0, 0.0);(20.0, 1.0, 3.0);porch_floor_center_48;roofJade+roofJade]
+Western/porch_floor_center[(20, -11.3, -0.5);(0.0, 180.0, 0.0);(2.0, 1.0, 2.0);porch_floor_center_49;roofJade+roofJade]
+Castles/roof_canvas[(19.5, -2.3, -0.4);(0.0, 0.0, 45.0);(5.4, 2.2, 3.0);roof_canvas_52;roofJade]
+Castles/wall_straight[(20.6, -0.6, -0.4);(0.0, 180.0, 0.0);(1.0, 2.3, 2.6);wall_straight_53;roofJade]
+Primitives/slope_default[(8.5, -5.3, -1);(0.0, 180.0, 0.0);(20.0, 0.5, 1.0);slope_default_54;element]
+Primitives/slope_default[(8.5, -5.3, 0);(0.0, 0.0, 0.0);(20.0, 0.5, 1.0);slope_default_55;element]
+Western/porch_floor_center[(8.5, 1, 1.3);(270.0, 0.0, 0.0);(20.0, 1.0, 3.0);porch_floor_center_56;roofJade+roofJade]
+Western/porch_floor_center[(8.5, 1, -2.1);(270.0, 0.0, 0.0);(20.0, 1.0, 3.0);porch_floor_center_57;roofJade+roofJade]
+Western/porch_floor_center[(8.5, -10.3, 1.3);(270.0, 0.0, 0.0);(20.0, 1.0, 3.0);porch_floor_center_61;roofJade+roofJade]
+Primitives/slope_default[(8.5, -10.8, -1);(0.0, 180.0, 0.0);(20.0, 0.5, 1.0);slope_default_62;element]
+Primitives/slope_default[(8.5, -10.8, 0);(0.0, 0.0, 0.0);(20.0, 0.5, 1.0);slope_default_63;element]
+Western/porch_floor_center[(8.5, -10.3, -2.1);(270.0, 0.0, 0.0);(20.0, 1.0, 3.0);porch_floor_center_64;roofJade+roofJade]
+Western/porch_floor_center[(-3.5, 0.9, -0.5);(0.0, 180.0, 0.0);(2.0, 1.0, 2.0);porch_floor_center_65;roofJade+roofJade]
+Castles/roof_canvas[(-2.3, -7.5, -0.4);(0.0, 180.0, 45.0);(5.4, 2.2, 3.0);roof_canvas_0;roofJade]
+Castles/wall_straight[(-4.5, -5.7, -0.4);(0.0, 180.0, 0.0);(1.0, 2.3, -2.6);wall_straight_1;roofJade]
+
+:materials
+_defaultMat[RGBA(1.000, 1.000, 1.000, 1.000);]
+wood[RGBA(0.882, 0.579, 0.402, 1.000);]
+woodDark[RGBA(0.641, 0.422, 0.293, 1.000);]
+roof[RGBA(0.886, 0.467, 0.341, 1.000);]
+stone[RGBA(0.667, 0.663, 0.737, 1.000);]
+lightStone[RGBA(0.812, 0.808, 0.855, 1.000);]
+glass[RGBA(0.298, 0.314, 0.365, 1.000);]
+blueSteel[RGBA(0.141, 0.565, 0.831, 1.000);]
+black[RGBA(0.267, 0.267, 0.267, 1.000);]
+bricks[RGBA(0.886, 0.467, 0.341, 1.000);]
+border[RGBA(1.000, 0.518, 0.376, 1.000);]
+roofJade[RGBA(0.228, 0.000, 0.650, 1.000);]
+element[RGBA(0.891, 0.625, 0.920, 1.000);]
+
+:textures
+
+:extra
