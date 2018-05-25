@@ -23,11 +23,11 @@ public class Timer : MonoBehaviour {
         
         
         inGameTimer.transform.localScale = new Vector3(-0.0025f,0.0025f,0.0025f);
-        inGameTimer.transform.Rotate(new Vector3(0.0f, 90.0f, -135.0f));
+        //inGameTimer.transform.Rotate(new Vector3(0.0f, 90.0f, -135.0f));
         
         //inGameTimer.transform.SetPositionAndRotation(Vector3.zero,);
         inGameTimer.transform.position = gameObject.transform.position;
-        inGameTimer.transform.localPosition += new Vector3(0.0f, -0.01f, -0.15f);
+        inGameTimer.transform.localPosition += new Vector3(0.0f, 0.01f, -0.1f);
     }
 
     // Update is called once per frame
@@ -41,6 +41,15 @@ public class Timer : MonoBehaviour {
         else
             displayedTime = minutes + ":" + Mathf.RoundToInt(seconds);
         textMesh.text = displayedTime;
+
+        orient();
+    }
+
+    private void orient()
+    {
+        Vector3 lookDirection = (GameObject.Find("FollowHead").transform.position-transform.position);
+        inGameTimer.transform.rotation = Quaternion.LookRotation(lookDirection);
+
     }
 
     //
