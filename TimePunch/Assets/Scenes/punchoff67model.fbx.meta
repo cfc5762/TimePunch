@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 39687d9f776b8b9478f8f35c67f02c0e
+timeCreated: 1526587083
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: floor_hole_51
+    100002: floor_hole_59
+    100004: porch_floor_center_47
+    100006: porch_floor_center_48
+    100008: porch_floor_center_49
+    100010: porch_floor_center_56
+    100012: porch_floor_center_57
+    100014: porch_floor_center_61
+    100016: porch_floor_center_64
+    100018: porch_floor_center_65
+    100020: //RootNode
+    100022: roof_canvas_52
+    100024: roof_canvas_60
+    100026: slope_default_20
+    100028: slope_default_46
+    100030: slope_default_54
+    100032: slope_default_55
+    100034: slope_default_62
+    100036: slope_default_63
+    100038: wall_straight_53
+    100040: wall_straight_58
+    100042: roof_canvas_0
+    100044: wall_straight_1
+    400000: floor_hole_51
+    400002: floor_hole_59
+    400004: porch_floor_center_47
+    400006: porch_floor_center_48
+    400008: porch_floor_center_49
+    400010: porch_floor_center_56
+    400012: porch_floor_center_57
+    400014: porch_floor_center_61
+    400016: porch_floor_center_64
+    400018: porch_floor_center_65
+    400020: //RootNode
+    400022: roof_canvas_52
+    400024: roof_canvas_60
+    400026: slope_default_20
+    400028: slope_default_46
+    400030: slope_default_54
+    400032: slope_default_55
+    400034: slope_default_62
+    400036: slope_default_63
+    400038: wall_straight_53
+    400040: wall_straight_58
+    400042: roof_canvas_0
+    400044: wall_straight_1
+    2300000: floor_hole_51
+    2300002: floor_hole_59
+    2300004: porch_floor_center_47
+    2300006: porch_floor_center_48
+    2300008: porch_floor_center_49
+    2300010: porch_floor_center_56
+    2300012: porch_floor_center_57
+    2300014: porch_floor_center_61
+    2300016: porch_floor_center_64
+    2300018: porch_floor_center_65
+    2300020: roof_canvas_52
+    2300022: roof_canvas_60
+    2300024: slope_default_20
+    2300026: slope_default_46
+    2300028: slope_default_54
+    2300030: slope_default_55
+    2300032: slope_default_62
+    2300034: slope_default_63
+    2300036: wall_straight_53
+    2300038: wall_straight_58
+    2300040: roof_canvas_0
+    2300042: wall_straight_1
+    3300000: floor_hole_51
+    3300002: floor_hole_59
+    3300004: porch_floor_center_47
+    3300006: porch_floor_center_48
+    3300008: porch_floor_center_49
+    3300010: porch_floor_center_56
+    3300012: porch_floor_center_57
+    3300014: porch_floor_center_61
+    3300016: porch_floor_center_64
+    3300018: porch_floor_center_65
+    3300020: roof_canvas_52
+    3300022: roof_canvas_60
+    3300024: slope_default_20
+    3300026: slope_default_46
+    3300028: slope_default_54
+    3300030: slope_default_55
+    3300032: slope_default_62
+    3300034: slope_default_63
+    3300036: wall_straight_53
+    3300038: wall_straight_58
+    3300040: roof_canvas_0
+    3300042: wall_straight_1
+    4300000: slope_default_20
+    4300002: slope_default_46
+    4300004: porch_floor_center_47
+    4300006: porch_floor_center_48
+    4300008: porch_floor_center_49
+    4300010: floor_hole_51
+    4300012: roof_canvas_52
+    4300014: wall_straight_53
+    4300016: slope_default_54
+    4300018: slope_default_55
+    4300020: porch_floor_center_56
+    4300022: porch_floor_center_57
+    4300024: wall_straight_58
+    4300026: floor_hole_59
+    4300028: roof_canvas_60
+    4300030: porch_floor_center_61
+    4300032: slope_default_62
+    4300034: slope_default_63
+    4300036: porch_floor_center_64
+    4300038: porch_floor_center_65
+    4300040: roof_canvas_0
+    4300042: wall_straight_1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
