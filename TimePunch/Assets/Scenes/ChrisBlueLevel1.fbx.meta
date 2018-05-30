@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 3364ce4434e384240877f814f3e8cc11
+timeCreated: 1526584868
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: engine_barrelTop_8
+    100004: engine_high_31
+    100006: engine_high_32
+    100008: engine_intakeArrow_11
+    100010: plane_rudder_16
+    100012: plane_rudder_17
+    100014: plane_rudder_18
+    100016: plane_rudder_19
+    100018: plane_rudder_20
+    100020: plane_rudder_21
+    100022: plane_rudder_22
+    100024: plane_rudder_23
+    100026: plane_rudder_24
+    100028: plane_rudderLarge_26
+    100030: plane_rudderLarge_27
+    100032: ship_cargoBody_37
+    100034: ship_cargoBody_40
+    100036: ship_cargoBody_41
+    100038: ship_cargoBody_43
+    100040: ship_cargoOpen_25
+    100042: wind_endRound_2
+    100044: wing_straight_10
+    100046: wing_straight_12
+    100048: wing_straight_4
+    100050: wing_straight_9
+    400000: //RootNode
+    400002: engine_barrelTop_8
+    400004: engine_high_31
+    400006: engine_high_32
+    400008: engine_intakeArrow_11
+    400010: plane_rudder_16
+    400012: plane_rudder_17
+    400014: plane_rudder_18
+    400016: plane_rudder_19
+    400018: plane_rudder_20
+    400020: plane_rudder_21
+    400022: plane_rudder_22
+    400024: plane_rudder_23
+    400026: plane_rudder_24
+    400028: plane_rudderLarge_26
+    400030: plane_rudderLarge_27
+    400032: ship_cargoBody_37
+    400034: ship_cargoBody_40
+    400036: ship_cargoBody_41
+    400038: ship_cargoBody_43
+    400040: ship_cargoOpen_25
+    400042: wind_endRound_2
+    400044: wing_straight_10
+    400046: wing_straight_12
+    400048: wing_straight_4
+    400050: wing_straight_9
+    2300000: engine_barrelTop_8
+    2300002: engine_high_31
+    2300004: engine_high_32
+    2300006: engine_intakeArrow_11
+    2300008: plane_rudder_16
+    2300010: plane_rudder_17
+    2300012: plane_rudder_18
+    2300014: plane_rudder_19
+    2300016: plane_rudder_20
+    2300018: plane_rudder_21
+    2300020: plane_rudder_22
+    2300022: plane_rudder_23
+    2300024: plane_rudder_24
+    2300026: plane_rudderLarge_26
+    2300028: plane_rudderLarge_27
+    2300030: ship_cargoBody_37
+    2300032: ship_cargoBody_40
+    2300034: ship_cargoBody_41
+    2300036: ship_cargoBody_43
+    2300038: ship_cargoOpen_25
+    2300040: wind_endRound_2
+    2300042: wing_straight_10
+    2300044: wing_straight_12
+    2300046: wing_straight_4
+    2300048: wing_straight_9
+    3300000: engine_barrelTop_8
+    3300002: engine_high_31
+    3300004: engine_high_32
+    3300006: engine_intakeArrow_11
+    3300008: plane_rudder_16
+    3300010: plane_rudder_17
+    3300012: plane_rudder_18
+    3300014: plane_rudder_19
+    3300016: plane_rudder_20
+    3300018: plane_rudder_21
+    3300020: plane_rudder_22
+    3300022: plane_rudder_23
+    3300024: plane_rudder_24
+    3300026: plane_rudderLarge_26
+    3300028: plane_rudderLarge_27
+    3300030: ship_cargoBody_37
+    3300032: ship_cargoBody_40
+    3300034: ship_cargoBody_41
+    3300036: ship_cargoBody_43
+    3300038: ship_cargoOpen_25
+    3300040: wind_endRound_2
+    3300042: wing_straight_10
+    3300044: wing_straight_12
+    3300046: wing_straight_4
+    3300048: wing_straight_9
+    4300000: wind_endRound_2
+    4300002: wing_straight_4
+    4300004: engine_barrelTop_8
+    4300006: wing_straight_9
+    4300008: wing_straight_10
+    4300010: engine_intakeArrow_11
+    4300012: wing_straight_12
+    4300014: plane_rudder_16
+    4300016: plane_rudder_17
+    4300018: plane_rudder_18
+    4300020: plane_rudder_19
+    4300022: plane_rudder_20
+    4300024: plane_rudder_21
+    4300026: plane_rudder_22
+    4300028: plane_rudder_23
+    4300030: plane_rudder_24
+    4300032: ship_cargoOpen_25
+    4300034: plane_rudderLarge_26
+    4300036: plane_rudderLarge_27
+    4300038: engine_high_31
+    4300040: engine_high_32
+    4300042: ship_cargoBody_37
+    4300044: ship_cargoBody_40
+    4300046: ship_cargoBody_41
+    4300048: ship_cargoBody_43
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
