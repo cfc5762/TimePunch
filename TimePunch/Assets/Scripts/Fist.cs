@@ -25,6 +25,13 @@ public class Fist : MonoBehaviour {
     public float maxSpeed;
     Vector3 idealPoint;
     SteamVR_Controller.Device cont;
+    public AudioSource punch = null;
+    public AudioSource whoosh = null;
+    public AudioSource wind = null;
+    public AudioSource foot1 = null;
+    public AudioSource landing = null;
+    public float timeForSteps;
+    public bool wasInAir = false;
     // Use this for initialization
     void Start () {
         canLaunch = true;
@@ -34,7 +41,12 @@ public class Fist : MonoBehaviour {
         LeftHit = Vector3.zero;
         idealPoint = new Vector3();
         hand = this.transform.parent.gameObject;
-	}
+        if (wind != null)
+        {
+            wind.volume = 0;
+            wind.Play();
+        }
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -159,8 +171,14 @@ public class Fist : MonoBehaviour {
                 }
                 else if (punchBuffer>0)//this is where we punch
                 {
+                               
                     canLaunch = true; 
                     punchTimer = 20;
+                    if(whoosh != null)
+                    {
+                        whoosh.pitch = Random.Range(0.8f, 1.2f); // randomizes pitch   
+                        whoosh.Play(); // plays whoosh sound when punch 
+                    }
                 }
                 idealPoint = new Vector3(0, 0, -.065f);
             }
@@ -197,7 +215,7 @@ public class Fist : MonoBehaviour {
                     SceneManager.LoadScene((currentScene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings);
                 }
                 if (info.transform.tag != "Boost" && info.transform.tag != "enemy" && info.transform.name != "Player" && canLaunch)
-                {
+                {              
                     canLaunch = false;
                     cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
                     Vector3 vel = rigidScript.Rig3D.velocity;
@@ -210,6 +228,7 @@ public class Fist : MonoBehaviour {
                     {
                         vel += ((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f);
                     }
+                    
                     punchTimer = 0;
                     rigidScript.Rig3D.velocity = vel;
                     if (info.collider.gameObject.tag == "Pillar")
@@ -217,7 +236,11 @@ public class Fist : MonoBehaviour {
                         rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 800f * 2));
                     }
 
-
+                    if (punch != null)
+                    {
+                        punch.pitch = Random.Range(0.8f, 1.2f);
+                        punch.Play();
+                    }
 
                 }
                
@@ -232,6 +255,59 @@ public class Fist : MonoBehaviour {
         
         prevLocalPos = transform.localPosition;
         prevpos = transform.position;
+
+        ////////////Wind Sounds///////////
+        if (wind != null)
+        {
+            if (GroundScript.OnGround)
+            {
+                wind.volume -= 0.5f * Time.deltaTime; // fade out
+            }
+
+            else if (rigidScript.Rig3D.velocity.magnitude != 0)
+            {
+                wind.volume = (rigidScript.Rig3D.velocity.magnitude / 25); // wind volume depends on velocity
+            }
+
+
+            else
+            {
+                wind.volume -= 0.2f * Time.deltaTime; // fade out
+            }
+        }
+        /////////Footstep Sounds/////////
+        if (foot1 != null)
+        {
+            int num = Random.Range(1, 3);
+            if (GroundScript.OnGround && rigidScript.Rig3D.velocity.magnitude > 1.0f && rigidScript.Rig3D.velocity.magnitude < 5.0f && timeForSteps > 50.0f) // walking speed
+            {
+                foot1.pitch = Random.Range(0.8f, 1.2f);
+                foot1.Play();
+                timeForSteps = 0;
+            }
+
+            else if (GroundScript.OnGround && rigidScript.Rig3D.velocity.magnitude >= 5.0f && timeForSteps > 25.0f) // running speed
+            {
+                foot1.pitch = Random.Range(0.8f, 1.2f);
+                foot1.Play();
+                timeForSteps = 0;
+            }
+            timeForSteps++;
+        }
+        //////////Landing Sound///////////
+        if (wind != null)
+        {
+            if (GroundScript.OnGround == false)
+            {
+                wasInAir = true;
+            }
+
+            if (GroundScript.OnGround == true && wasInAir == true)
+            {
+                landing.Play();
+                wasInAir = false;
+            }
+        }
 
     }
    
