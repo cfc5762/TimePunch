@@ -107,6 +107,8 @@ ModelImporter:
     100198: roof_half_extra_7
     100200: roof_point_149
     100202: roof_point_214
+    100204: block_1 1
+    100206: block_2 1
     400000: awning_corner_inner_110
     400002: block_1
     400004: block_112
@@ -209,6 +211,8 @@ ModelImporter:
     400198: roof_half_extra_7
     400200: roof_point_149
     400202: roof_point_214
+    400204: block_1 1
+    400206: block_2 1
     2300000: awning_corner_inner_110
     2300002: block_1
     2300004: block_112
@@ -310,6 +314,8 @@ ModelImporter:
     2300196: roof_half_extra_7
     2300198: roof_point_149
     2300200: roof_point_214
+    2300202: block_1 1
+    2300204: block_2 1
     3300000: awning_corner_inner_110
     3300002: block_1
     3300004: block_112
@@ -411,6 +417,8 @@ ModelImporter:
     3300196: roof_half_extra_7
     3300198: roof_point_149
     3300200: roof_point_214
+    3300202: block_1 1
+    3300204: block_2 1
     4300000: roof_flat_round_4
     4300002: roof_half_extra_7
     4300004: roof_half_8
@@ -512,6 +520,8 @@ ModelImporter:
     4300196: block_2
     4300198: block_3
     4300200: block_4
+    4300202: block_1
+    4300204: block_2
   materials:
     importMaterials: 1
     materialName: 0
