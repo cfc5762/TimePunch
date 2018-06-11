@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: b961b207cd0eee948bb5e70a41c76e49
+timeCreated: 1527741130
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: awning_straight_9
+    100002: battlement_straight_6
+    100004: block_14
+    100006: block_15
+    100008: block_16
+    100010: block_17
+    100012: block_3
+    100014: block_4
+    100016: block_5
+    100018: block_7
+    100020: block_default_11
+    100022: block_low_1
+    100024: block_low_2
+    100026: //RootNode
+    100028: wall_hole_13
+    100030: block_2
+    100032: block_3 1
+    100034: slope_cornerInner_0
+    100036: slope_cornerInner_1
+    400000: awning_straight_9
+    400002: battlement_straight_6
+    400004: block_14
+    400006: block_15
+    400008: block_16
+    400010: block_17
+    400012: block_3
+    400014: block_4
+    400016: block_5
+    400018: block_7
+    400020: block_default_11
+    400022: block_low_1
+    400024: block_low_2
+    400026: //RootNode
+    400028: wall_hole_13
+    400030: block_2
+    400032: block_3 1
+    400034: slope_cornerInner_0
+    400036: slope_cornerInner_1
+    2300000: awning_straight_9
+    2300002: battlement_straight_6
+    2300004: block_14
+    2300006: block_15
+    2300008: block_16
+    2300010: block_17
+    2300012: block_3
+    2300014: block_4
+    2300016: block_5
+    2300018: block_7
+    2300020: block_default_11
+    2300022: block_low_1
+    2300024: block_low_2
+    2300026: wall_hole_13
+    2300028: block_2
+    2300030: block_3 1
+    2300032: slope_cornerInner_0
+    2300034: slope_cornerInner_1
+    3300000: awning_straight_9
+    3300002: battlement_straight_6
+    3300004: block_14
+    3300006: block_15
+    3300008: block_16
+    3300010: block_17
+    3300012: block_3
+    3300014: block_4
+    3300016: block_5
+    3300018: block_7
+    3300020: block_default_11
+    3300022: block_low_1
+    3300024: block_low_2
+    3300026: wall_hole_13
+    3300028: block_2
+    3300030: block_3 1
+    3300032: slope_cornerInner_0
+    3300034: slope_cornerInner_1
+    4300000: block_low_1
+    4300002: block_low_2
+    4300004: block_3
+    4300006: block_4
+    4300008: block_5
+    4300010: battlement_straight_6
+    4300012: block_7
+    4300014: awning_straight_9
+    4300016: block_default_11
+    4300018: wall_hole_13
+    4300020: block_14
+    4300022: block_15
+    4300024: block_16
+    4300026: block_17
+    4300028: slope_cornerInner_0
+    4300030: slope_cornerInner_1
+    4300032: block_2
+    4300034: block_3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
