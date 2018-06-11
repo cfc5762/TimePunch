@@ -2015,7 +2015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44da6e141ab5efc4da4e3b3e698c0fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.15
+  Acceleration: 0.1
   MoveSpeed: 10
   hand: {fileID: 0}
   maxDist: 6
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44da6e141ab5efc4da4e3b3e698c0fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.15
+  Acceleration: 0.1
   MoveSpeed: 10
   hand: {fileID: 0}
   maxDist: 6
