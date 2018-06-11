@@ -517,9 +517,10 @@ GameObject:
   - component: {fileID: 4726722719836426}
   - component: {fileID: 95097476236523012}
   - component: {fileID: 114762523499493792}
+  - component: {fileID: 136713232437969328}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1812,6 +1813,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMissiles: 1
   aggroDistance: 15
+--- !u!136 &136713232437969328
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1547904369098810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.07683609
+  m_Height: 0.19374742
+  m_Direction: 1
+  m_Center: {x: -0.003713893, y: 0.044591736, z: 0.010893871}
 --- !u!137 &137753502453663404
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
