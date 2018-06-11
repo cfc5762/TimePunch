@@ -29,6 +29,8 @@ TagManager:
   - 8
   - 9
   - 10
+  - Enemy
+  - Missile
   layers:
   - Default
   - TransparentFX

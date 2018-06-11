@@ -214,6 +214,14 @@ public class Fist : MonoBehaviour {
                     Scene currentScene = SceneManager.GetActiveScene();
                     SceneManager.LoadScene((currentScene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings);
                 }
+                if(info.transform.tag == "Enemy")
+                {
+                    Destroy(info.transform.gameObject);
+                }
+                if(info.transform.tag == "Missile")
+                {
+                    Destroy(info.transform.gameObject);
+                }
                 if (info.transform.tag != "Boost" && info.transform.tag != "enemy" && info.transform.name != "Player" && canLaunch)
                 {              
                     canLaunch = false;
