@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using Valve.VR.InteractionSystem;
 
 public class Fist : MonoBehaviour {
+    Vector3 inp = Vector3.zero;
     public static int speedImmune = 0;
     int punchBuffer = 0;
     bool canLaunch;
@@ -127,29 +128,35 @@ public class Fist : MonoBehaviour {
                 float y = vel.y;
                 ovel.y = 0;
                 vel.y = 0;
-                
+                inp = Vector3.zero;
                 vel += Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir* axis.x,(GroundScript.OnGround)?Acceleration:.08f)*axis.magnitude;
                 if (vel.magnitude > MoveSpeed*axis.magnitude && ovel.magnitude > vel.magnitude)
                 {
                     //this is where we move
                     vel.y = y;
+                    inp = Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+                    rigidScript.Rig3D.position += inp * .5f;
                     rigidScript.Rig3D.velocity = vel;
+                    
                 }
-                else if (vel.magnitude > MoveSpeed*axis.magnitude)
+                else if (Vector3.Dot(axis, vel) > MoveSpeed)
                 {
+                 
                     //this is so we dont break velocity cap
                 }
                 else
                 {
                     //this is also a valid move condiditon
                     vel.y = y;
+                    inp = Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .04f) * axis.magnitude;
+                    rigidScript.Rig3D.position += inp * .5f;
                     rigidScript.Rig3D.velocity = vel;
                 }
                 transform.GetChild(0).localScale = new Vector3(-50, -50, -50);//fist scale
             }
             
           
-                rigidScript.Rig3D.mass = 15;
+                
                 
             
             if (punchTimer > 0)//this is where we set the fists ideal location to the punch destination
@@ -318,6 +325,7 @@ public class Fist : MonoBehaviour {
         }
 
     }
-   
-   
+    
+
+
 }
