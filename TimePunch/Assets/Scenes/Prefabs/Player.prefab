@@ -183,8 +183,8 @@ GameObject:
   - component: {fileID: 114653302540084150}
   - component: {fileID: 124052472625849354}
   - component: {fileID: 92492860681324190}
-  - component: {fileID: 114476455164968038}
   - component: {fileID: 114005291963120218}
+  - component: {fileID: 114999966360556892}
   m_Layer: 0
   m_Name: VRCamera (eye)
   m_TagString: MainCamera
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 114686469007533782}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1968,20 +1968,6 @@ MonoBehaviour:
   controllerPrefab: {fileID: 168468, guid: 3f39fc63a93686e4a8e9168ee73f24d9, type: 2}
   showDebugText: 0
   spewDebugText: 0
---- !u!114 &114476455164968038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1251327744873882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _head: {fileID: 4289129384964178}
-  _ears: {fileID: 0}
-  wireframe: 0
 --- !u!114 &114504977024310734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2029,7 +2015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44da6e141ab5efc4da4e3b3e698c0fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.3
+  Acceleration: 0.15
   MoveSpeed: 10
   hand: {fileID: 0}
   maxDist: 6
@@ -2105,7 +2091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44da6e141ab5efc4da4e3b3e698c0fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.3
+  Acceleration: 0.15
   MoveSpeed: 10
   hand: {fileID: 0}
   maxDist: 6
@@ -2260,6 +2246,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3bba2c36dd79242b3157dbcd876bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114999966360556892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1251327744873882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head: {fileID: 4289129384964178}
+  _ears: {fileID: 0}
+  wireframe: 0
 --- !u!124 &124052472625849354
 Behaviour:
   m_ObjectHideFlags: 1
