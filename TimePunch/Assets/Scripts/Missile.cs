@@ -6,6 +6,7 @@ public class Missile : MonoBehaviour {
 
     public float maxSpeed;
     Vector3 playerPos;
+    Vector3 prevPlayerPos;
 
     Vector3 acceleration;
     Vector3 velocity;
@@ -19,8 +20,13 @@ public class Missile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        prevPlayerPos = playerPos;
         playerPos = rigidScript.Rig3D.position;
 
+        if(Vector3.Distance(prevPlayerPos,playerPos)>=5)
+        {
+            Destroy(this.gameObject);
+        }
 
         //seek player
         Vector3 toTarget = playerPos - transform.position;
@@ -35,6 +41,8 @@ public class Missile : MonoBehaviour {
         transform.position += velocity;
 
         gameObject.transform.rotation = Quaternion.LookRotation(velocity);
+
+
     }
 
     public void ApplyForce(Vector3 force)

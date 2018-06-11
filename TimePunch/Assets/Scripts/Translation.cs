@@ -7,7 +7,7 @@ public class Translation : MonoBehaviour {
     [Range(-0.1f,0.1f)]
     public float speedPerFrame;
     public bool horizontal;
-
+    public bool zAxis;
    
 
 
@@ -25,9 +25,13 @@ public class Translation : MonoBehaviour {
         {
             newMovement = new Vector3(speedPerFrame, 0f, 0f);
         }
-        else
+        else if (!zAxis)
         {
             newMovement = new Vector3(0f, speedPerFrame, 0f);
+        }
+        else
+        {
+            newMovement = new Vector3(0f, 0f, speedPerFrame);
         }
 
         transform.position = transform.position + newMovement;
