@@ -12,6 +12,6 @@ public class rigidScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
+        print(Rig3D.velocity);
 	}
 }
