@@ -182,6 +182,11 @@ ModelImporter:
     100348: block_4
     100350: block_1 1
     100352: block_2 1
+    100354: roof_flat_largeCenter_0 1
+    100356: roof_flat_largeCenter_1
+    100358: roof_flat_largeCenter_2
+    100360: roof_flat_largeCenter_3
+    100362: roof_flat_largeCenter_4
     400000: awning_corner_inner_110
     400002: block_112
     400004: block_113
@@ -359,6 +364,11 @@ ModelImporter:
     400348: block_4
     400350: block_1 1
     400352: block_2 1
+    400354: roof_flat_largeCenter_0 1
+    400356: roof_flat_largeCenter_1
+    400358: roof_flat_largeCenter_2
+    400360: roof_flat_largeCenter_3
+    400362: roof_flat_largeCenter_4
     2300000: awning_corner_inner_110
     2300002: block_112
     2300004: block_113
@@ -535,6 +545,11 @@ ModelImporter:
     2300346: block_4
     2300348: block_1 1
     2300350: block_2 1
+    2300352: roof_flat_largeCenter_0 1
+    2300354: roof_flat_largeCenter_1
+    2300356: roof_flat_largeCenter_2
+    2300358: roof_flat_largeCenter_3
+    2300360: roof_flat_largeCenter_4
     3300000: awning_corner_inner_110
     3300002: block_112
     3300004: block_113
@@ -711,6 +726,11 @@ ModelImporter:
     3300346: block_4
     3300348: block_1 1
     3300350: block_2 1
+    3300352: roof_flat_largeCenter_0 1
+    3300354: roof_flat_largeCenter_1
+    3300356: roof_flat_largeCenter_2
+    3300358: roof_flat_largeCenter_3
+    3300360: roof_flat_largeCenter_4
     4300000: roof_flat_round_4
     4300002: roof_half_extra_7
     4300004: roof_half_8
@@ -887,6 +907,11 @@ ModelImporter:
     4300346: block_4
     4300348: block_1
     4300350: block_2
+    4300352: roof_flat_largeCenter_0
+    4300354: roof_flat_largeCenter_1
+    4300356: roof_flat_largeCenter_2
+    4300358: roof_flat_largeCenter_3
+    4300360: roof_flat_largeCenter_4
   materials:
     importMaterials: 1
     materialName: 0
