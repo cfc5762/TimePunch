@@ -304,7 +304,6 @@ GameObject:
   - component: {fileID: 114647203493383386}
   - component: {fileID: 54713368506660350}
   - component: {fileID: 114801413649672508}
-  - component: {fileID: 114686469007533782}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -492,6 +491,7 @@ GameObject:
   - component: {fileID: 136044691062897428}
   - component: {fileID: 114661986325222120}
   - component: {fileID: 114258547637044896}
+  - component: {fileID: 114441189879843400}
   m_Layer: 27
   m_Name: BodyCollider
   m_TagString: Untagged
@@ -963,7 +963,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415483777054638}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 5.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4259007151611590}
@@ -1265,7 +1265,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.05
+  near clip plane: 0.01
   far clip plane: 500
   field of view: 90
   orthographic: 0
@@ -1968,6 +1968,17 @@ MonoBehaviour:
   controllerPrefab: {fileID: 168468, guid: 3f39fc63a93686e4a8e9168ee73f24d9, type: 2}
   showDebugText: 0
   spewDebugText: 0
+--- !u!114 &114441189879843400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684182045984130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e6a63f05d21d147a734d526da910b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114504977024310734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2158,17 +2169,6 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &114686469007533782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1415483777054638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1e6a63f05d21d147a734d526da910b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114708849905159846
 MonoBehaviour:
   m_ObjectHideFlags: 1
