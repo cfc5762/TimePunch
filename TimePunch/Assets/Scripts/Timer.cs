@@ -16,6 +16,8 @@ public class Timer : MonoBehaviour {
 
     public int numNodes;
     public Vector3[] nodes;
+    public GameObject[] nodesGO;
+    private GameObject nodeGO;
 
     private Vector3 playerHeadLocation;
 
@@ -27,6 +29,11 @@ public class Timer : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         nodes = new Vector3[numNodes];
+        nodesGO = new GameObject[numNodes];
+
+        nodeGO = new GameObject();
+        nodeGO.AddComponent<Transform>();
+
         timeSoFar = 0f;
         isDone = false;
         inGameTimer = new GameObject();
@@ -35,7 +42,7 @@ public class Timer : MonoBehaviour {
         textMesh.fontSize = 200;
         textMesh.alignment = TextAlignment.Center;
 
-        radius = 0.3f;
+        radius = 0.015f;
         
         inGameTimer.transform.localScale = new Vector3(0.00025f,-0.00025f,0.00025f);
         //inGameTimer.transform.Rotate(new Vector3(0.0f, 90.0f, -135.0f));
@@ -52,7 +59,8 @@ public class Timer : MonoBehaviour {
         midpoint = transform.position;
 
         currentNode = getClosestNode();
-        inGameTimer.transform.position = transform.position + nodes[currentNode];
+        
+        inGameTimer.transform.position = nodesGO[currentNode].transform.position;
         //float euclidianNorm = Mathf.Sqrt(Mathf.Pow(playerHeadLocation.x - midpoint.x, 2) + Mathf.Pow(playerHeadLocation.y - midpoint.y, 2) +Mathf.Pow(playerHeadLocation.z-midpoint.z,2));
         //newLocalPosition.x = midpoint.x + radius * ((playerHeadLocation.x - midpoint.x) / euclidianNorm);
         //newLocalPosition.z = midpoint.y + radius * ((playerHeadLocation.y - midpoint.y) / euclidianNorm);
@@ -92,13 +100,13 @@ public class Timer : MonoBehaviour {
     public int getClosestNode()
     {
         int closestNode = -1;
-        float maxDistance = 0f;
+        float minDistance = 100f;
         for (int i = 0; i < nodes.Length; i++)
         {
-            float currentDistance = Vector3.Distance(transform.TransformPoint(transform.localPosition + nodes[i]), playerHeadLocation);
-            if (currentDistance>maxDistance)
+            float currentDistance = Vector3.Distance(playerHeadLocation, transform.TransformPoint(transform.localPosition + nodes[i]));
+            if (currentDistance<minDistance)
             {
-                maxDistance = currentDistance;
+                minDistance = currentDistance;
                 closestNode = i;
             }
         }
@@ -116,6 +124,10 @@ public class Timer : MonoBehaviour {
             Debug.Log(pos);
             pos.x = -pos.x;
             nodes[i] = pos;
+
+            nodesGO[i] = Instantiate(nodeGO, transform.position, Quaternion.identity);
+            nodesGO[i].transform.parent = transform;
+            nodesGO[i].transform.localPosition = nodes[i];
         }
     }
 
