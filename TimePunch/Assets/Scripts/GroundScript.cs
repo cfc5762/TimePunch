@@ -10,7 +10,7 @@ public class GroundScript : MonoBehaviour {
 	}
     private void FixedUpdate()
     {
-        if (Physics.Raycast(transform.position, -1 * transform.up, 1))
+        if (Physics.Raycast(transform.position, -1 * transform.up, 1.6f))
         {
             OnGround = true;
         }
