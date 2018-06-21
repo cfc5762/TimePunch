@@ -26,15 +26,21 @@ public class Fist : MonoBehaviour {
     public float maxSpeed;
     Vector3 idealPoint;
     SteamVR_Controller.Device cont;
-    public AudioSource punch = null;
-    public AudioSource whoosh = null;
-    public AudioSource wind = null;
-    public AudioSource foot1 = null;
-    public AudioSource landing = null;
-    public float timeForSteps;
-    public bool wasInAir = false;
+    AudioSource punch = null;
+    AudioSource whoosh = null;
+    AudioSource wind = null;
+    AudioSource foot1 = null;
+    AudioSource landing = null;
+    float timeForSteps;
+    bool wasInAir = false;
     // Use this for initialization
     void Start () {
+        AudioSource[] allAudioSources = GetComponents<AudioSource>();
+        foot1 = allAudioSources[0];
+        landing = allAudioSources[1];
+        wind = allAudioSources[2];
+        whoosh = allAudioSources[3];
+        punch = allAudioSources[4];
         canLaunch = true;
         info = new RaycastHit();
         prevpos = Vector3.zero;
