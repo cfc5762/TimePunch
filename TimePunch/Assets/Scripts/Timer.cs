@@ -8,6 +8,14 @@ public class Timer : MonoBehaviour {
     private float minutes;
     private float seconds;
     private string displayedTime;   //current time in the level as displayed as a string
+
+    private Vector3 midpoint;
+    private float radius;
+
+    private Vector3 playerHeadLocation;
+
+    private Vector3 newLocalPosition;
+
     public Font timerFont;          
     GameObject inGameTimer;
     TextMesh textMesh;
@@ -20,19 +28,32 @@ public class Timer : MonoBehaviour {
         textMesh = inGameTimer.AddComponent<TextMesh>();
         textMesh.fontSize = 200;
         textMesh.alignment = TextAlignment.Center;
+
+        radius = 0.1f;
         
-        
-        inGameTimer.transform.localScale = new Vector3(-0.0025f,0.0025f,0.0025f);
+        inGameTimer.transform.localScale = new Vector3(0.0025f,-0.0025f,0.0025f);
         //inGameTimer.transform.Rotate(new Vector3(0.0f, 90.0f, -135.0f));
         
         //inGameTimer.transform.SetPositionAndRotation(Vector3.zero,);
         inGameTimer.transform.position = gameObject.transform.position;
-        inGameTimer.transform.localPosition += new Vector3(0.0f, 0.01f, -0.1f);
+        //inGameTimer.transform.localPosition += new Vector3(0.0f, 0.01f, -0.1f);
     }
 
     // Update is called once per frame
     void Update () {
-        if(!isDone)
+        playerHeadLocation = GameObject.Find("FollowHead").transform.position;
+        midpoint = transform.parent.position;
+
+        float euclidianNorm = Mathf.Sqrt(Mathf.Pow(playerHeadLocation.x - midpoint.x, 2) + Mathf.Pow(playerHeadLocation.y - midpoint.y, 2) +Mathf.Pow(playerHeadLocation.z-midpoint.z,2));
+        //newLocalPosition.x = midpoint.x + radius * ((playerHeadLocation.x - midpoint.x) / euclidianNorm);
+        //newLocalPosition.z = midpoint.y + radius * ((playerHeadLocation.y - midpoint.y) / euclidianNorm);
+        //inGameTimer.transform.localPosition = newLocalPosition;
+        newLocalPosition =  radius * ((playerHeadLocation - midpoint)/euclidianNorm);
+        //newLocalPosition = (midpoint - playerHeadLocation) * radius;
+        //newLocalPosition.y = 0;
+        inGameTimer.transform.localPosition = newLocalPosition;
+
+        if (!isDone)
             timeSoFar += Time.deltaTime;
         minutes = Mathf.Floor(timeSoFar / 60);
         seconds = timeSoFar % 60;
@@ -47,7 +68,7 @@ public class Timer : MonoBehaviour {
 
     private void orient()
     {
-        Vector3 lookDirection = (GameObject.Find("FollowHead").transform.position-transform.position);
+        Vector3 lookDirection = (playerHeadLocation - inGameTimer.transform.position);
         inGameTimer.transform.rotation = Quaternion.LookRotation(lookDirection);
 
     }
