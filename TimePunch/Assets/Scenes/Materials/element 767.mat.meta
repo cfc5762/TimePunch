@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 1767ea4cbb866b84594a220bb2276241
+timeCreated: 1528705561
+=======
+<<<<<<< HEAD
 guid: d5059bb7cfd1e844596b10580d7ad7dd
 timeCreated: 1528476022
 =======
 guid: 3a755bbedeb75d142a3cec1607b506a2
 timeCreated: 1528737037
+>>>>>>> master
 >>>>>>> master
 licenseType: Free
 NativeFormatImporter:
