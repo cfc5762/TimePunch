@@ -4734,6 +4734,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
     - target: {fileID: 114650677401110950, guid: abfb514e8a1aa694188209e1ed989a63,
         type: 2}
       propertyPath: Acceleration
@@ -4794,6 +4796,7 @@ Prefab:
       propertyPath: wind
       value: 
       objectReference: {fileID: 0}
+>>>>>>> master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abfb514e8a1aa694188209e1ed989a63, type: 2}
   m_IsPrefabParent: 0

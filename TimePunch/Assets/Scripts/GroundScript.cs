@@ -8,20 +8,18 @@ public class GroundScript : MonoBehaviour {
 	void Start () {
         OnGround = false;
 	}
-
-    // Update is called once per frame
-    void OnCollisionEnter(Collision C)
+    private void FixedUpdate()
     {
-        if (rigidScript.Rig3D.velocity.y > -0.5 && rigidScript.Rig3D.velocity.y < 0.5)
+        if (Physics.Raycast(transform.position, -1 * transform.up, 1.6f))
+        {
             OnGround = true;
+        }
+        else
+        {
+            OnGround = false;
+        }
     }
-    void OnCollisionStay(Collision C)
-    {
-        if (rigidScript.Rig3D.velocity.y > -0.5&& rigidScript.Rig3D.velocity.y < 0.5)
-            OnGround = true;
-    }
-    void OnCollisionExit(Collision C)
-    {
-        OnGround = false;
-    }
+   
+   
+  
 }

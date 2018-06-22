@@ -141,7 +141,10 @@ public class Fist : MonoBehaviour {
                     //this is where we move
                     vel.y = y;
                     inp = Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
-                    rigidScript.Rig3D.position += inp * .5f;
+                    if (GroundScript.OnGround)
+                    {
+                        rigidScript.Rig3D.position += inp * .5f;
+                    }
                     rigidScript.Rig3D.velocity = vel;
                     
                 }

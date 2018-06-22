@@ -17,6 +17,7 @@ public class RespawnZone : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         rigidScript.Rig3D.position = destination;
+        rigidScript.Rig3D.velocity = Vector3.zero; 
         Timer.Restart();
     }
 }
