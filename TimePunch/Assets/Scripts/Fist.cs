@@ -36,11 +36,14 @@ public class Fist : MonoBehaviour {
     // Use this for initialization
     void Start () {
         AudioSource[] allAudioSources = GetComponents<AudioSource>();
-        foot1 = allAudioSources[0];
-        landing = allAudioSources[1];
-        wind = allAudioSources[2];
-        whoosh = allAudioSources[3];
-        punch = allAudioSources[4];
+        if (allAudioSources != null)
+        {
+            foot1 = allAudioSources[0];
+            landing = allAudioSources[1];
+            wind = allAudioSources[2];
+            whoosh = allAudioSources[3];
+            punch = allAudioSources[4];
+        }
         canLaunch = true;
         info = new RaycastHit();
         prevpos = Vector3.zero;
@@ -158,7 +161,10 @@ public class Fist : MonoBehaviour {
                     //this is also a valid move condiditon
                     vel.y = y;
                     inp = Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .04f) * axis.magnitude;
-                    rigidScript.Rig3D.position += inp * .5f;
+                    if (GroundScript.OnGround)
+                    {
+                        rigidScript.Rig3D.position += inp * .5f;
+                    }
                     rigidScript.Rig3D.velocity = vel;
                 }
                 transform.GetChild(0).localScale = new Vector3(-50, -50, -50);//fist scale
@@ -244,20 +250,20 @@ public class Fist : MonoBehaviour {
                     cont.TriggerHapticPulse(3000, Valve.VR.EVRButtonId.k_EButton_Axis4);
                     Vector3 vel = rigidScript.Rig3D.velocity;
                     vel.y = 0;
-                    if ((vel + ((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f)).magnitude < vel.magnitude)
+                    if ((vel + ((transform.forward - transform.up).normalized * -.3f / Time.deltaTime * .55f)).magnitude < vel.magnitude)
                     {
-                        vel += ((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f) * 2;
+                        vel += ((transform.forward - transform.up).normalized * -.3f / Time.deltaTime * .55f) * 2;
                     }
                     else
                     {
-                        vel += ((transform.forward - transform.up).normalized * -(prevLocalPos - transform.localPosition).magnitude / Time.deltaTime * .55f);
+                        vel += ((transform.forward - transform.up).normalized * -.3f / Time.deltaTime * .55f);
                     }
                     
                     punchTimer = 0;
                     rigidScript.Rig3D.velocity = vel;
                     if (info.collider.gameObject.tag == "Pillar")
                     {
-                        rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -(prevpos - transform.position).magnitude / Time.deltaTime * 800f * 2));
+                        rigidScript.Rig3D.AddForce(((transform.forward - transform.up).normalized * -.3f / Time.deltaTime * 800f * 2));
                     }
 
                     if (punch != null)
