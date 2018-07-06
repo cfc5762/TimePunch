@@ -134,22 +134,53 @@ public class Fist : MonoBehaviour {
                 Vector3 ovel = rigidScript.Rig3D.velocity;
                 Vector3 vel = rigidScript.Rig3D.velocity;
                 Vector2 axis = new Vector3(cont.GetState().rAxis0.x, cont.GetState().rAxis0.y);
+
                 float y = vel.y;
                 ovel.y = 0;
                 vel.y = 0;
-                inp = Vector3.zero;
-                vel += Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir* axis.x,(GroundScript.OnGround)?Acceleration:.08f)*axis.magnitude;
+                
+                if (GroundScript.OnGround)
+                {
+
+                    if (axis.x < 0)//left
+                    {
+                        if (axis.y < 0)//backwards
+                        {
+                            vel += Vector3.ClampMagnitude(GroundScript.Back.normalized * Mathf.Abs(axis.y)+ GroundScript.Left.normalized* Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+                        }
+                        else//forwards
+                        {
+                            vel += Vector3.ClampMagnitude(GroundScript.Forward.normalized *Mathf.Abs(axis.y) + GroundScript.Left.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+                        }
+                    }
+                    else//right
+                    {
+                        if (axis.y < 0)//backwards
+                        {
+                            vel += Vector3.ClampMagnitude(GroundScript.Back.normalized * Mathf.Abs(axis.y) + GroundScript.Right.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+
+                        }
+                        else//forwards
+                        {
+                            vel += Vector3.ClampMagnitude(GroundScript.Forward.normalized * Mathf.Abs(axis.y) + GroundScript.Right.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+
+                        }
+                    }
+                    
+                }
+                else
+                {
+                    vel += Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+                }
                 if (vel.magnitude > MoveSpeed*axis.magnitude && ovel.magnitude > vel.magnitude)
                 {
                     //this is where we move
                     vel.y = y;
-                    inp = Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+
                     if (GroundScript.OnGround)
                     {
-                        rigidScript.Rig3D.position += inp * .5f;
+                        rigidScript.Rig3D.velocity = vel * .6f;//NOW WITH 40 PERCENT TIGHTER TURNS
                     }
-                    rigidScript.Rig3D.velocity = vel;
-                    
                 }
                 else if (Vector3.Dot(axis, vel) > MoveSpeed)
                 {
@@ -160,11 +191,7 @@ public class Fist : MonoBehaviour {
                 {
                     //this is also a valid move condiditon
                     vel.y = y;
-                    inp = Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .04f) * axis.magnitude;
-                    if (GroundScript.OnGround)
-                    {
-                        rigidScript.Rig3D.position += inp * .5f;
-                    }
+                   
                     rigidScript.Rig3D.velocity = vel;
                 }
                 transform.GetChild(0).localScale = new Vector3(-50, -50, -50);//fist scale
