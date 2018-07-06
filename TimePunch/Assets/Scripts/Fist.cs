@@ -141,30 +141,37 @@ public class Fist : MonoBehaviour {
                 
                 if (GroundScript.OnGround)
                 {
-
-                    if (axis.x < 0)//left
+                    if (axis.sqrMagnitude > .01f)
                     {
-                        if (axis.y < 0)//backwards
+                        rigidScript.Rig3D.useGravity = false;
+                        if (axis.x < 0)//left
                         {
-                            vel += Vector3.ClampMagnitude(GroundScript.Back.normalized * Mathf.Abs(axis.y)+ GroundScript.Left.normalized* Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+                            if (axis.y < 0)//backwards
+                            {
+                                vel += Vector3.ClampMagnitude(GroundScript.Back.normalized * Mathf.Abs(axis.y) + GroundScript.Left.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+                            }
+                            else//forwards
+                            {
+                                vel += Vector3.ClampMagnitude(GroundScript.Forward.normalized * Mathf.Abs(axis.y) + GroundScript.Left.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+                            }
                         }
-                        else//forwards
+                        else//right
                         {
-                            vel += Vector3.ClampMagnitude(GroundScript.Forward.normalized *Mathf.Abs(axis.y) + GroundScript.Left.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+                            if (axis.y < 0)//backwards
+                            {
+                                vel += Vector3.ClampMagnitude(GroundScript.Back.normalized * Mathf.Abs(axis.y) + GroundScript.Right.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+
+                            }
+                            else//forwards
+                            {
+                                vel += Vector3.ClampMagnitude(GroundScript.Forward.normalized * Mathf.Abs(axis.y) + GroundScript.Right.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
+
+                            }
                         }
                     }
-                    else//right
+                    else
                     {
-                        if (axis.y < 0)//backwards
-                        {
-                            vel += Vector3.ClampMagnitude(GroundScript.Back.normalized * Mathf.Abs(axis.y) + GroundScript.Right.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
-
-                        }
-                        else//forwards
-                        {
-                            vel += Vector3.ClampMagnitude(GroundScript.Forward.normalized * Mathf.Abs(axis.y) + GroundScript.Right.normalized * Mathf.Abs(axis.x), (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
-
-                        }
+                        rigidScript.Rig3D.useGravity = true;
                     }
                     
                 }
@@ -172,14 +179,14 @@ public class Fist : MonoBehaviour {
                 {
                     vel += Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .08f) * axis.magnitude;
                 }
-                if (vel.magnitude > MoveSpeed*axis.magnitude && ovel.magnitude > vel.magnitude)
+                if (vel.magnitude > MoveSpeed*axis.sqrMagnitude && ovel.magnitude > vel.magnitude)
                 {
                     //this is where we move
                     vel.y = y;
 
                     if (GroundScript.OnGround)
                     {
-                        rigidScript.Rig3D.velocity = vel * .6f;//NOW WITH 40 PERCENT TIGHTER TURNS
+                        rigidScript.Rig3D.velocity = vel*.9f;//NOW WITH 10 PERCENT TIGHTER TURNS
                     }
                 }
                 else if (Vector3.Dot(axis, vel) > MoveSpeed)

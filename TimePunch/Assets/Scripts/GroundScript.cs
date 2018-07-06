@@ -36,18 +36,19 @@ public class GroundScript : MonoBehaviour {
     private void FixedUpdate()
     {
 
-        
-        if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 2f, hitInfo: out mid))
+       
+        if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 1.05f, hitInfo: out mid))
         {
             
             OnGround = true;
         }
         else
         {
+            rigidScript.Rig3D.useGravity = true;
             OnGround = false;
             mid = new RaycastHit();
         }
-        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) + Head.lookDir*.25f, direction: -1 * transform.up, maxDistance: 2f, hitInfo: out fwd))
+        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) + Head.lookDir*.25f, direction: -1 * transform.up, maxDistance: 1.05f, hitInfo: out fwd))
         {
            
             Forward = fwd.point-mid.point;
@@ -57,7 +58,7 @@ public class GroundScript : MonoBehaviour {
         {
             fwd = new RaycastHit();
         }
-        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) + Head.rightDir*.25f, direction: -1 * transform.up, maxDistance: 2f, hitInfo: out rgt))
+        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) + Head.rightDir*.25f, direction: -1 * transform.up, maxDistance: 1.05f, hitInfo: out rgt))
         {
             Right = rgt.point - mid.point;
             
@@ -66,7 +67,7 @@ public class GroundScript : MonoBehaviour {
         {
             rgt = new RaycastHit();
         }
-        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) - Head.lookDir*.25f, direction: -1 * transform.up, maxDistance: 2f, hitInfo: out bck))
+        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) - Head.lookDir*.25f, direction: -1 * transform.up, maxDistance: 1.05f, hitInfo: out bck))
         {
             Back = bck.point - mid.point;
             
@@ -75,7 +76,7 @@ public class GroundScript : MonoBehaviour {
         {
             bck = new RaycastHit();
         }
-        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) - Head.rightDir*.25f, direction: -1 * transform.up, maxDistance: 2f, hitInfo: out lft))
+        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) - Head.rightDir*.25f, direction: -1 * transform.up, maxDistance: 1.05f, hitInfo: out lft))
         {
             Left = lft.point - mid.point;
             
@@ -87,7 +88,17 @@ public class GroundScript : MonoBehaviour {
        
         transform.position = new Vector3(Head.Headpos.x, transform.position.y, Head.Headpos.z);
     }
-   
-   
-  
+
+    private void OnDrawGizmos()
+    {
+        if (OnGround)
+        {
+            Gizmos.DrawLine(mid.point, fwd.point);
+            Gizmos.DrawLine(mid.point, rgt.point);
+            Gizmos.DrawLine(mid.point, lft.point);
+            Gizmos.DrawLine(mid.point, bck.point);
+        }
+    }
+
+
 }
