@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroundScript : MonoBehaviour {
     public static bool OnGround;
-    bool setback;
+    
     RaycastHit fwd;
     RaycastHit lft;
     RaycastHit rgt;
@@ -37,7 +37,7 @@ public class GroundScript : MonoBehaviour {
     {
 
        
-        if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 1.05f, hitInfo: out mid))
+        if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 1.05f, hitInfo: out mid)&&mid.transform.tag != "Slidable")
         {
             
             OnGround = true;
