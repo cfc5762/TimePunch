@@ -21,7 +21,7 @@ public class GroundScript : MonoBehaviour {
     Vector3 rgtChk;
 	// Use this for initialization
 	void Start () {
-        setback = false;
+
         fwd = new RaycastHit();
         lft = new RaycastHit();
         rgt = new RaycastHit();
