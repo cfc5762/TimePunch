@@ -211,6 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0d2c14e81132c449a4f4d1db4df83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentNode: 0
+  numNodes: 360
+  nodes: []
   timerFont: {fileID: 12800000, guid: 60665c865bb9e2b4ea72776afa4ed993, type: 3}
 --- !u!1 &938962605
 GameObject:
@@ -253,7 +256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4623496748286808, guid: abfb514e8a1aa694188209e1ed989a63, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.019
+      value: 0.117
       objectReference: {fileID: 0}
     - target: {fileID: 4623496748286808, guid: abfb514e8a1aa694188209e1ed989a63, type: 2}
       propertyPath: m_LocalPosition.z
