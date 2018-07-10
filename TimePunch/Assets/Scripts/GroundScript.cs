@@ -4,24 +4,99 @@ using UnityEngine;
 
 public class GroundScript : MonoBehaviour {
     public static bool OnGround;
+    
+    RaycastHit fwd;
+    RaycastHit lft;
+    RaycastHit rgt;
+    RaycastHit bck;
+    RaycastHit mid;
+    int Ground = 0;
+    public static Vector3 Forward;
+    public static Vector3 Right;
+    public static Vector3 Left;
+    public static Vector3 Back;
+    Vector3 fwdChk;
+    Vector3 bckChk;
+    Vector3 lftChk;
+    Vector3 rgtChk;
 	// Use this for initialization
 	void Start () {
+
+        fwd = new RaycastHit();
+        lft = new RaycastHit();
+        rgt = new RaycastHit();
+        bck = new RaycastHit();
+        mid = new RaycastHit();
+        fwdChk = new Vector3(.25f, 1, 0);
+        bckChk = new Vector3(-.25f, 1, 0);
+        lftChk = new Vector3(0, 1, .25f);
+        rgtChk = new Vector3(0, 1, -.25f);
         OnGround = false;
 	}
+    private void FixedUpdate()
+    {
 
-    // Update is called once per frame
-    void OnCollisionEnter(Collision C)
-    {
-        if (rigidScript.Rig3D.velocity.y > -0.5 && rigidScript.Rig3D.velocity.y < 0.5)
+       
+        if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 1.01f, hitInfo: out mid)&&mid.transform.tag != "Slidable")
+        {
             OnGround = true;
+        }
+        else
+        {
+            rigidScript.Rig3D.useGravity = true;
+            mid = new RaycastHit();
+        }
+        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) + Head.lookDir*.25f, direction: -1 * transform.up, maxDistance: 1.01f, hitInfo: out fwd))
+        {
+           
+            Forward = fwd.point-mid.point;
+            
+        }
+        else
+        {
+            fwd = new RaycastHit();
+        }
+        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) + Head.rightDir*.25f, direction: -1 * transform.up, maxDistance: 1.01f, hitInfo: out rgt))
+        {
+            Right = rgt.point - mid.point;
+            
+        }
+        else
+        {
+            rgt = new RaycastHit();
+        }
+        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) - Head.lookDir*.25f, direction: -1 * transform.up, maxDistance: 1.01f, hitInfo: out bck))
+        {
+            Back = bck.point - mid.point;
+            
+        }
+        else
+        {
+            bck = new RaycastHit();
+        }
+        if (Physics.Raycast(origin: transform.position + new Vector3(0, 1, 0) - Head.rightDir*.25f, direction: -1 * transform.up, maxDistance: 1.01f, hitInfo: out lft))
+        {
+            Left = lft.point - mid.point;
+            
+        }
+        else
+        {
+            lft = new RaycastHit(); 
+        }
+       
+        transform.position = new Vector3(Head.Headpos.x, transform.position.y, Head.Headpos.z);
     }
-    void OnCollisionStay(Collision C)
+
+    private void OnDrawGizmos()
     {
-        if (rigidScript.Rig3D.velocity.y > -0.5&& rigidScript.Rig3D.velocity.y < 0.5)
-            OnGround = true;
+        if (OnGround)
+        {
+            Gizmos.DrawLine(mid.point, fwd.point);
+            Gizmos.DrawLine(mid.point, rgt.point);
+            Gizmos.DrawLine(mid.point, lft.point);
+            Gizmos.DrawLine(mid.point, bck.point);
+        }
     }
-    void OnCollisionExit(Collision C)
-    {
-        OnGround = false;
-    }
+
+
 }
