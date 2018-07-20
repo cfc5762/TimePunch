@@ -37,16 +37,13 @@ public class GroundScript : MonoBehaviour {
     {
 
        
-<<<<<<< HEAD
-        if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 1.01f, hitInfo: out mid))
-=======
         if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 1.01f, hitInfo: out mid)&&mid.transform.tag != "Slidable")
->>>>>>> master
         {
             OnGround = true;
         }
         else
         {
+            OnGround = false;
             rigidScript.Rig3D.useGravity = true;
             mid = new RaycastHit();
         }
