@@ -37,7 +37,7 @@ public class GroundScript : MonoBehaviour {
     {
 
        
-        if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 1.05f, hitInfo: out mid))
+        if (Physics.Raycast(origin: transform.position+new Vector3(0,1,0), direction: -1 * transform.up, maxDistance: 1.01f, hitInfo: out mid))
         {
             
             OnGround = true;
