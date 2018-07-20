@@ -43,6 +43,7 @@ public class GroundScript : MonoBehaviour {
         }
         else
         {
+            OnGround = false;
             rigidScript.Rig3D.useGravity = true;
             mid = new RaycastHit();
         }

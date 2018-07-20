@@ -1,0 +1,20 @@
+# Made using Asset Forge (1.3)
+
+:models
+Aircraft/engine_side[(0, -0.5, 0);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);engine_side_22;blueSteel+_defaultMat+black]
+Swords/guard_detailed[(2, 0, 0);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);guard_detailed_23;hilt]
+Swords/guard_slant_cross[(1, 0, 0);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);guard_slant_cross_24;hilt]
+Swords/guard[(3, 0, 0);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);guard_25;hilt]
+Swords/hilt[(3, -0.4, 0);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);hilt_26;hilt+handle]
+Primitives/block_default[(4.3, -1.4, 1);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);block_default_27;_defaultMat]
+
+:materials
+blueSteel[RGBA(0.141, 0.565, 0.831, 1.000);]
+_defaultMat[RGBA(1.000, 1.000, 1.000, 1.000);]
+black[RGBA(0.267, 0.267, 0.267, 1.000);]
+hilt[RGBA(1.000, 0.683, 0.059, 1.000);]
+handle[RGBA(0.847, 0.620, 0.392, 1.000);]
+
+:textures
+
+:extra
