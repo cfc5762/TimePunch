@@ -1,0 +1,29 @@
+# Made using Asset Forge (1.3)
+
+:models
+Aircraft/plane_body[(0, -1, 0);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);plane_body_0;_defaultMat+blueSteel]
+Aircraft/plane_body[(0, -1, -1);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);plane_body_1;_defaultMat+blueSteel]
+Aircraft/plane_cockpitClassic[(0, -1, -2);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);plane_cockpitClassic_3;_defaultMat+blueSteel+glass]
+Aircraft/engine_intakeArrow[(0, 0, -0.5);(0.0, 180.0, 0.0);(1.0, 1.7, 1.0);engine_intakeArrow_6;blueSteel+_defaultMat+black]
+Aircraft/plane_end[(0, -1, 1);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);plane_end_7;_defaultMat+blueSteel]
+Aircraft/ship_frontSquare[(0, 0, 2);(0.0, 180.0, 180.0);(1.0, 1.0, 1.0);ship_frontSquare_8;blueSteel+_defaultMat]
+Aircraft/plane_rudderLarge[(0, -0.1, 2.2);(0.0, 0.0, 0.0);(1.6, 1.0, 1.0);plane_rudderLarge_10;blueSteel+_defaultMat]
+Aircraft/wind_endLow[(1, -0.4, -0.5);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);wind_endLow_11;blueSteel+_defaultMat]
+Aircraft/wind_endLow[(-1, -0.4, -0.5);(0.0, 0.0, 0.0);(-1.0, 1.0, 1.0);wind_endLow_14;blueSteel+_defaultMat]
+Aircraft/ship_cargoOpen[(0.6, 0, -4.35);(0.0, 90.0, 0.0);(1.5, 1.0, 1.0);ship_cargoOpen_15;blueSteel+_defaultMat+black]
+Aircraft/ship_cargoOpen[(0.6, 0, -3.05);(0.0, 90.0, 0.0);(1.5, 1.0, 1.0);ship_cargoOpen_16;blueSteel+_defaultMat+black]
+Aircraft/ship_hull[(-1, -0.4, -3.8);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);ship_hull_17;blueSteel+_defaultMat]
+Aircraft/ship_sidePanel[(-1.3, 0, -4.6);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);ship_sidePanel_18;_defaultMat+blueSteel]
+Aircraft/ship_cargoFront[(-0.6, 0.9, -5);(0.0, 180.0, 0.0);(1.0, 1.0, 1.0);ship_cargoFront_19;_defaultMat+blueSteel]
+Aircraft/wind_endRound[(-0.6, 1.3, -6);(0.0, 90.0, 0.0);(1.0, 1.0, 0.6);wind_endRound_20;_defaultMat+blueSteel]
+Aircraft/ship_sidePanel[(0.7, 0.3, -4.6);(0.0, 270.0, 0.0);(1.0, 1.0, 1.0);ship_sidePanel_21;_defaultMat+blueSteel]
+
+:materials
+_defaultMat[RGBA(1.000, 1.000, 1.000, 1.000);]
+blueSteel[RGBA(0.141, 0.565, 0.831, 1.000);]
+glass[RGBA(0.298, 0.314, 0.365, 1.000);]
+black[RGBA(0.267, 0.267, 0.267, 1.000);]
+
+:textures
+
+:extra
