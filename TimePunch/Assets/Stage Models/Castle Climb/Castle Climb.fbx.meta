@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: bdea488b2ef9b60438a2e68058334135
+timeCreated: 1532067787
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: floor_square_1
+    100004: floor_square_2
+    100006: floor_square_20
+    100008: floor_square_21
+    100010: floor_square_24
+    100012: floor_square_26
+    100014: floor_square_27
+    100016: floor_square_28
+    100018: floor_square_29
+    100020: floor_square_30
+    100022: floor_square_37
+    100024: floor_square_6
+    100026: floor_square_7
+    100028: floor_square_8
+    100030: floor_square_9
+    100032: planks_floorHalf_23
+    100034: planks_floorHalf_34
+    100036: planks_floorHalf_35
+    100038: planks_floorHalf_36
+    100040: roof_factorySlant_33
+    100042: roof_point_17
+    100044: roof_point_18
+    100046: roof_point_19
+    100048: roof_straight_11
+    100050: stairs_stone_25
+    100052: wall_corner_38
+    100054: wall_doorwayRound_5
+    100056: wall_windowSquare_31
+    400000: //RootNode
+    400002: floor_square_1
+    400004: floor_square_2
+    400006: floor_square_20
+    400008: floor_square_21
+    400010: floor_square_24
+    400012: floor_square_26
+    400014: floor_square_27
+    400016: floor_square_28
+    400018: floor_square_29
+    400020: floor_square_30
+    400022: floor_square_37
+    400024: floor_square_6
+    400026: floor_square_7
+    400028: floor_square_8
+    400030: floor_square_9
+    400032: planks_floorHalf_23
+    400034: planks_floorHalf_34
+    400036: planks_floorHalf_35
+    400038: planks_floorHalf_36
+    400040: roof_factorySlant_33
+    400042: roof_point_17
+    400044: roof_point_18
+    400046: roof_point_19
+    400048: roof_straight_11
+    400050: stairs_stone_25
+    400052: wall_corner_38
+    400054: wall_doorwayRound_5
+    400056: wall_windowSquare_31
+    2300000: floor_square_1
+    2300002: floor_square_2
+    2300004: floor_square_20
+    2300006: floor_square_21
+    2300008: floor_square_24
+    2300010: floor_square_26
+    2300012: floor_square_27
+    2300014: floor_square_28
+    2300016: floor_square_29
+    2300018: floor_square_30
+    2300020: floor_square_37
+    2300022: floor_square_6
+    2300024: floor_square_7
+    2300026: floor_square_8
+    2300028: floor_square_9
+    2300030: planks_floorHalf_23
+    2300032: planks_floorHalf_34
+    2300034: planks_floorHalf_35
+    2300036: planks_floorHalf_36
+    2300038: roof_factorySlant_33
+    2300040: roof_point_17
+    2300042: roof_point_18
+    2300044: roof_point_19
+    2300046: roof_straight_11
+    2300048: stairs_stone_25
+    2300050: wall_corner_38
+    2300052: wall_doorwayRound_5
+    2300054: wall_windowSquare_31
+    3300000: floor_square_1
+    3300002: floor_square_2
+    3300004: floor_square_20
+    3300006: floor_square_21
+    3300008: floor_square_24
+    3300010: floor_square_26
+    3300012: floor_square_27
+    3300014: floor_square_28
+    3300016: floor_square_29
+    3300018: floor_square_30
+    3300020: floor_square_37
+    3300022: floor_square_6
+    3300024: floor_square_7
+    3300026: floor_square_8
+    3300028: floor_square_9
+    3300030: planks_floorHalf_23
+    3300032: planks_floorHalf_34
+    3300034: planks_floorHalf_35
+    3300036: planks_floorHalf_36
+    3300038: roof_factorySlant_33
+    3300040: roof_point_17
+    3300042: roof_point_18
+    3300044: roof_point_19
+    3300046: roof_straight_11
+    3300048: stairs_stone_25
+    3300050: wall_corner_38
+    3300052: wall_doorwayRound_5
+    3300054: wall_windowSquare_31
+    4300000: floor_square_1
+    4300002: floor_square_2
+    4300004: wall_doorwayRound_5
+    4300006: floor_square_6
+    4300008: floor_square_7
+    4300010: floor_square_8
+    4300012: floor_square_9
+    4300014: roof_straight_11
+    4300016: roof_point_17
+    4300018: roof_point_18
+    4300020: roof_point_19
+    4300022: floor_square_20
+    4300024: floor_square_21
+    4300026: planks_floorHalf_23
+    4300028: floor_square_24
+    4300030: stairs_stone_25
+    4300032: floor_square_26
+    4300034: floor_square_27
+    4300036: floor_square_28
+    4300038: floor_square_29
+    4300040: floor_square_30
+    4300042: wall_windowSquare_31
+    4300044: roof_factorySlant_33
+    4300046: planks_floorHalf_34
+    4300048: planks_floorHalf_35
+    4300050: planks_floorHalf_36
+    4300052: floor_square_37
+    4300054: wall_corner_38
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
