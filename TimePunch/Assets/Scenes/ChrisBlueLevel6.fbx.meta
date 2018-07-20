@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 1d0a1abfd818c1948ae13ac03fa70c21
+timeCreated: 1532063076
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: engine_intakeArrow_6
+    100004: plane_body_0
+    100006: plane_body_1
+    100008: plane_cockpitClassic_3
+    100010: plane_end_7
+    100012: plane_rudderLarge_10
+    100014: ship_cargoFront_19
+    100016: ship_cargoOpen_15
+    100018: ship_cargoOpen_16
+    100020: ship_frontSquare_8
+    100022: ship_hull_17
+    100024: ship_sidePanel_18
+    100026: ship_sidePanel_21
+    100028: wind_endLow_11
+    100030: wind_endLow_14
+    100032: wind_endRound_20
+    400000: //RootNode
+    400002: engine_intakeArrow_6
+    400004: plane_body_0
+    400006: plane_body_1
+    400008: plane_cockpitClassic_3
+    400010: plane_end_7
+    400012: plane_rudderLarge_10
+    400014: ship_cargoFront_19
+    400016: ship_cargoOpen_15
+    400018: ship_cargoOpen_16
+    400020: ship_frontSquare_8
+    400022: ship_hull_17
+    400024: ship_sidePanel_18
+    400026: ship_sidePanel_21
+    400028: wind_endLow_11
+    400030: wind_endLow_14
+    400032: wind_endRound_20
+    2300000: engine_intakeArrow_6
+    2300002: plane_body_0
+    2300004: plane_body_1
+    2300006: plane_cockpitClassic_3
+    2300008: plane_end_7
+    2300010: plane_rudderLarge_10
+    2300012: ship_cargoFront_19
+    2300014: ship_cargoOpen_15
+    2300016: ship_cargoOpen_16
+    2300018: ship_frontSquare_8
+    2300020: ship_hull_17
+    2300022: ship_sidePanel_18
+    2300024: ship_sidePanel_21
+    2300026: wind_endLow_11
+    2300028: wind_endLow_14
+    2300030: wind_endRound_20
+    3300000: engine_intakeArrow_6
+    3300002: plane_body_0
+    3300004: plane_body_1
+    3300006: plane_cockpitClassic_3
+    3300008: plane_end_7
+    3300010: plane_rudderLarge_10
+    3300012: ship_cargoFront_19
+    3300014: ship_cargoOpen_15
+    3300016: ship_cargoOpen_16
+    3300018: ship_frontSquare_8
+    3300020: ship_hull_17
+    3300022: ship_sidePanel_18
+    3300024: ship_sidePanel_21
+    3300026: wind_endLow_11
+    3300028: wind_endLow_14
+    3300030: wind_endRound_20
+    4300000: plane_body_0
+    4300002: plane_body_1
+    4300004: plane_cockpitClassic_3
+    4300006: engine_intakeArrow_6
+    4300008: plane_end_7
+    4300010: ship_frontSquare_8
+    4300012: plane_rudderLarge_10
+    4300014: wind_endLow_11
+    4300016: wind_endLow_14
+    4300018: ship_cargoOpen_15
+    4300020: ship_cargoOpen_16
+    4300022: ship_hull_17
+    4300024: ship_sidePanel_18
+    4300026: ship_cargoFront_19
+    4300028: wind_endRound_20
+    4300030: ship_sidePanel_21
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
