@@ -31,6 +31,8 @@ TagManager:
   - 10
   - Enemy
   - Missile
+  - projectile
+  - Slidable
   layers:
   - Default
   - TransparentFX

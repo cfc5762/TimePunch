@@ -177,7 +177,11 @@ public class Fist : MonoBehaviour {
                 }
                 else
                 {
+
                     vel += Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .12f) * axis.magnitude;
+
+                    vel += Vector3.ClampMagnitude(Head.lookDir * axis.y + Head.rightDir * axis.x, (GroundScript.OnGround) ? Acceleration : .12f) * axis.magnitude;
+
                 }
                 if (vel.magnitude > MoveSpeed*axis.sqrMagnitude && ovel.magnitude > vel.magnitude)
                 {
