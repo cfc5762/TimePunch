@@ -12,7 +12,6 @@ Buildings/block_low[(-1, 0, -2);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);block_low_18;ele
 Buildings/block_low[(-1, 0, -1);(0.0, 0.0, 0.0);(1.0, 1.0, 1.0);block_low_19;element+element]
 Buildings/roof_flat_largeCenter[(1, 0, -3);(0.0, 180.0, 180.0);(1.0, 1.0, 1.0);roof_flat_largeCenter_22;element+element]
 Buildings/roof_flat_largeCenter[(1, 0, -2);(0.0, 180.0, 180.0);(1.0, 1.0, 1.0);roof_flat_largeCenter_23;element+element]
-Buildings/roof_flat_largeCenter[(1, 0, -3);(0.0, 180.0, 180.0);(1.0, 1.0, 1.0);roof_flat_largeCenter_26;border+element]
 Buildings/roof_flat_largeCenter[(2, 0, -1);(0.0, 180.0, 180.0);(1.0, 1.0, 1.0);roof_flat_largeCenter_29;element+element]
 Buildings/roof_flat_largeCenter[(2, 0, -2);(0.0, 180.0, 180.0);(1.0, 1.0, 1.0);roof_flat_largeCenter_30;element+element]
 Buildings/roof_flat_largeCenter[(2, 0, -3);(0.0, 180.0, 180.0);(1.0, 1.0, 1.0);roof_flat_largeCenter_31;element+element]
